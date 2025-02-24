@@ -1,23 +1,24 @@
-# TÍTULO DO PROJETO
+# TÍTULO A DEFINIR
 
-`CURSO`
+`Curso: Sistemas para Internet`
 
-`DISCIPLINA`
+`Disciplina: Projeto`
 
-`SEMESTRE`
+`5º Eixo`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Aplicação móvel para conectar psicopedagogos voluntários ou que buscam mais experiência à crianças e adolescentes em situação de vunerabilidade financeira.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Alicia Ribeiro Andrade da Silva
+* Danilo Henrique Pupin de Carvalho
+* Elisabete Romana dos Santos de Paula
+* Isabella Cristina da Silva Prado
+* Nickolas Ribeiro de Mendonça
 
 ## Orientador
 
-* Nome completo do professor 1
+* Udo Fritzke Junior
 
 ## Instruções de utilização
 
