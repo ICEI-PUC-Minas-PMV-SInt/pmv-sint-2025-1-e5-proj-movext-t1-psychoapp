@@ -46,15 +46,27 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O aplicativo deve possibilitar o cadastro e a atualização das informações sobre a disponibilidade de atendimento voluntário ou à custo social. | ALTA | 
+|RF-002| O aplicativo deve permitir o cadastro  de psicopedagogos voluntários, incluindo nome, formação, experiência e disponibilidade.    | ALTA |
+|RF-003| O aplicativo deve permitir a visualização detalhada do perfil de crianças e adolescentes atípicos. O perfil deve conter a trajetória 
+pedagógica, tipos de transtornos, dificuldade/ou deficiências, foto de perfil entre outras informações relevantes. | ALTA |
+|RF-004| O aplicativo deve comprovar a condição social dos pais do possível paciente. | ALTA |
+|RF-005| O aplicativo deve conter a localidade do possível paciente. | MÉDIA |
+|RF-006| O aplicativo deve filtrar possíveis pacientes que aceitam atendimento à valor social daqueles que aceitam apenas atendimento gratuíto. | MÉDIA |
+|RF-007| O aplicativo deve oferecer autenticação via email e senha, além de suporte para recuperação de senha. | ALTA |
+|RF-008| O aplicativo deve permitir reagendamento e cancelamento de sessões com notificação prévia. | MÉDIA |
+
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O aplicativo deve ser compatível com dispositivos Android e iOS | ALTA | 
+|RNF-002| O aplicativo deve garantir segurança dos dados utilizando criptografia nas comunicações e armazenamento seguro de informações sensíveis.  |  ALTA | 
+|RNF-003| O aplicativo deve suportar ao menos 10.000 usuários simultaneamente sem degradação de desempenho. | MÉDIA |
+|RNF-004| O tempo de resposta para carregamento das telas não deve ultrapassar 2 segundos. | BAIXA |
+|RNF-005| O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados (LGPD). | MÉDIA |
+|RNF| O aplicativo deve apresentar as informações de forma estruturada e de fácil compreensão. | MÉDIA |
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -77,7 +89,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
+|01| O projeto deverá ser entregue até julho de 2025 |
 |02| Não pode ser desenvolvido um módulo de backend        |
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
