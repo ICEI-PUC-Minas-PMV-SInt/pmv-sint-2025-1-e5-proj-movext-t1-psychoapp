@@ -20,7 +20,7 @@ A criação deste aplicativo é justificada pela necessidade urgente de ampliar 
 
 ## Relação com a Extensão Universitária
 
-Relacionar a situação-problema da organização com o impacto social esperado com a implantação do sistema sociotécnico.
+A Extensão Universitária é um dos pilares fundamentais da universidade, ao lado do ensino e da pesquisa, e tem como objetivo promover a interação entre a instituição de ensino e a sociedade, contribuindo para a transformação social e o desenvolvimento comunitário. O projeto do aplicativo móvel para conectar as famílias a profissionais especializados está alinhado com os princípios da Extensão Universitária, uma vez que busca resolver uma situação-problema de relevância social e promover um impacto positivo na comunidade.
 
 ## Descrição do Parceiro
 
