@@ -51,10 +51,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-003| O aplicativo deve permitir a visualização detalhada do perfil de crianças e adolescentes atípicos. O perfil deve conter a trajetória 
 pedagógica, tipos de transtornos, dificuldade/ou deficiências, foto de perfil entre outras informações relevantes. | ALTA |
 |RF-004| O aplicativo deve comprovar a condição social dos pais do possível paciente. | ALTA |
-|RF-005| O aplicativo deve conter a localidade do possível paciente. | MÉDIA |
-|RF-006| O aplicativo deve filtrar possíveis pacientes que aceitam atendimento à valor social daqueles que aceitam apenas atendimento gratuíto. | MÉDIA |
+|RF-005| O aplicativo deve conter a localidade do possível paciente. | MEDIA |
+|RF-006| O aplicativo deve filtrar possíveis pacientes que aceitam atendimento à valor social daqueles que aceitam apenas atendimento gratuíto. | MEDIA |
 |RF-007| O aplicativo deve oferecer autenticação via email e senha, além de suporte para recuperação de senha. | ALTA |
-|RF-008| O aplicativo deve permitir reagendamento e cancelamento de sessões com notificação prévia. | MÉDIA |
+|RF-008| O aplicativo deve permitir reagendamento e cancelamento de sessões com notificação prévia. | MEDIA |
 
 
 ### Requisitos não Funcionais
@@ -63,10 +63,10 @@ pedagógica, tipos de transtornos, dificuldade/ou deficiências, foto de perfil 
 |-------|-------------------------|----|
 |RNF-001| O aplicativo deve ser compatível com dispositivos Android e iOS | ALTA | 
 |RNF-002| O aplicativo deve garantir segurança dos dados utilizando criptografia nas comunicações e armazenamento seguro de informações sensíveis.  |  ALTA | 
-|RNF-003| O aplicativo deve suportar ao menos 10.000 usuários simultaneamente sem degradação de desempenho. | MÉDIA |
+|RNF-003| O aplicativo deve suportar ao menos 10.000 usuários simultaneamente sem degradação de desempenho. | MEDIA |
 |RNF-004| O tempo de resposta para carregamento das telas não deve ultrapassar 2 segundos. | BAIXA |
-|RNF-005| O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados (LGPD). | MÉDIA |
-|RNF| O aplicativo deve apresentar as informações de forma estruturada e de fácil compreensão. | MÉDIA |
+|RNF-005| O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados (LGPD). | MEDIA |
+|RNF| O aplicativo deve apresentar as informações de forma estruturada e de fácil compreensão. | MEDIA |
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
