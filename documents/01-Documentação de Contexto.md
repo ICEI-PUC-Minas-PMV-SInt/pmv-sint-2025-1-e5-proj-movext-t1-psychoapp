@@ -1,36 +1,22 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+O projeto em questão consiste no desenvolvimento de um aplicativo móvel destinado a conectar pais de crianças carentes com trantornos do neurodesenvolvimento a profissionais da área de psicologia e psicopedagogia, dispostos a atendê-las a valores reduzidos ou de forma gratuita. O objetivo principal do app é facilitar o acesso a atendimento psicológico de qualidade para crianças em situação de vulnerabilidade social, promovendo um impacto positivo em sua saúde mental e bem-estar.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+A falta de acesso a atendimento psicológico e psiquiátrico para crianças carentes é um problema significativo, especialmente em regiões com poucos recursos ou onde os serviços de saúde mental são escassos. Além disso, a distância e os custos elevados das consultas dificultam ainda mais o acesso a esses serviços, deixando muitas crianças sem o suporte necessário.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+> **Objetivo Geral**:
+> - Desenvolver um aplicativo móvel que conecte crianças carentes com problemas psiquiátricos ou psicológicos a psicólogos e psicopedagogos dispostos a oferecer atendimento a valores reduzidos ou gratuitamente.
+> > **Objetivos Específicos**:
+> - Facilitar o agendamento de consultas presenciais, considerando a disponibilidade dos profissionais e a proximidade geográfica entre as partes.
+> - Promover a saúde mental e o bem-estar de crianças em situação de vulnerabilidade social.
+> - Oferecer aos profissionais uma plataforma para ganhar experiência e contribuir para a sociedade.
  
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
-
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A criação deste aplicativo é justificada pela necessidade urgente de ampliar o acesso a serviços de saúde mental para famílias carentes. Ao conectar essas famílias a profissionais dispostos a ajudar, o app não apenas promove a saúde mental, mas também fortalece a responsabilidade social dos profissionais envolvidos. Além disso, o foco em consultas presenciais visa garantir a eficácia do tratamento, uma vez que o contato direto é fundamental para o sucesso terapêutico.
 
 ## Relação com a Extensão Universitária
 
