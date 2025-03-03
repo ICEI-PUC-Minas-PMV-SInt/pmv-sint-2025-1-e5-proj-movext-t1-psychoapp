@@ -100,7 +100,7 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 ## Diagrama de Casos de Uso
 
-<img src="img/diagrama-uml.jpg">
+<img src="img/diagrama-uml-psychoapp.jpg">
 
 ## Modelo ER (Projeto Conceitual)
 
