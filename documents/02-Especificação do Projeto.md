@@ -16,6 +16,18 @@ Formada em pedagogia com pós em psicopedagogia e pós em edução especial e in
 
 ---
 
+### Márcio José
+
+<img src="img/marcio.jpg" width = "150px">
+
+Pedreiro autonomo pai de um filho atípico (transtorno do espectro autista).
+
+| MOTIVAÇÕES                                                                                                                                                                                                                      | FRUSTRAÇÕES                                                                                                                                                                                                                                                                                                                                                                                                                                | HOBBIES / HISTÓRIA                                                                                                                                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|Márcio é pai solteiro de seu filho Gabriel. Sua esposa faleceu quando Gabriel tinha poucos anos de vida, e desde então a principal motivação de Márcio tem sido garantir a melhor educação e condição de vida possível a seu filho.| Seu filho nasceu um transtorno do espectro autista de nível 1 de suporte. Mesmo sendo o nível de menor suporte do transtorno, o acompanhamento com profissionais da área de psicopedagogia é essencial para garantir o melhor aproveitamento pedagógico, entretanto o alto custo destes profissionais impossibilita sua contratação.| Márcio vem de uma origem humilde e sempre teve dificuldades financeiras, sua esposa veio a falecer nos primeiros anos de vida de seu filho Gabriel, que nasceu com transtorno do espectro autista de nível 1. Desde então, ele tem buscado trazer a melhor condição de vida possível a ele, investindo principalmente em sua educação, tendo em vista as limitações e dificuldades que o transtorno traz.|
+
+---
+
 ## Histórias de Usuários
 
 A partir da compreensão do dia a dia das personas identificadas para o projeto, foram registradas as seguintes histórias de usuários.
@@ -25,8 +37,11 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 | Natalia Almeida   | Poder informar a pais ou responsáveis a disponibilidade de atendimento pedagógio para pessoas atípicas voluntário ou a custo social.                                                              |Ganhar mais experiência prática e auxiliar crianças e adolescentes em que os pais não tenham condição de pagar atendimento particular. |
 | Natalia Almeida   | Encontrar em mais detalhes perfis de crianças e adolescentes atípicos que precisam de atendimento. Com uma pequena biografia da trajetória pedagógica, tipos de transtornos, dificuldades e/ou deficiências, foto de perfil entre outras informações relevantes.                                                              |Selecionar os perfis que tenho condições de atender de forma social. |
 | Natalia Almeida   | Identificar e comprovar a condição social dos pais do possível paciente.                                                              |Garantir a acessibilidade a quem de fato precisa, que não tenha condições financeiras para arcar com atendimento particular ou em clínicas.|
-| Natalia Almeida   | Identificar a localidade do possível paciente                                                               |Saber se compensa mais atender no domicílio dele ou no meu. |
+| Natalia Almeida   | Identificar a localidade do possível paciente.                                                               |Saber se compensa mais atender no domicílio dele ou no meu. |
 | Natalia Almeida   | Filtrar possíveis pacientes que aceitem atendimento a valor social daqueles que aceitem apenas atendimento gratuíto.                                                              |Alinhar expectativas e possibilidades de atendimento, nem toda intervenção é possível a custo zero. |
+| Márcio José  | Encontrar psicopedagogos particulares dispostos a fazer trabalho voluntário ou a custo social.                                                              |Realizar o acompanhamento pedagógico do meu filho com transtorno do espectro autista.|
+| Márcio José  | Selecionar apenas profissionais próximos a minha localidade.                                                             |Optar por profissionais mais próximos, reduzindo custos com transporte.|
+| Márcio José  | Visualizar a imagem de perfil, o currículo e as formações do profissional. disponível.                                                             |Garantir a seleção de um profissional regulamentado para evitar fraudes ou abusos.|
 ## Arquitetura e Tecnologias
 
 o	Descreva brevemente a arquitetura definida para o projeto e as tecnologias a serem utilizadas. Sugere-se a criação de um diagrama de componentes da solução.
@@ -40,48 +55,9 @@ Colocar a imagem do modelo construído apresentando a proposta de solução.
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+A tabela que se segue apresenta a matriz de rastreabilidade dos requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
-### Requisitos Funcionais
-
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| O aplicativo deve possibilitar o cadastro e a atualização das informações sobre a disponibilidade de atendimento voluntário ou à custo social. | ALTA | 
-|RF-002| O aplicativo deve permitir o cadastro  de psicopedagogos voluntários, incluindo nome, formação, experiência e disponibilidade.    | ALTA |
-|RF-003| O aplicativo deve permitir a visualização detalhada do perfil de crianças e adolescentes atípicos. O perfil deve conter a trajetória 
-pedagógica, tipos de transtornos, dificuldade/ou deficiências, foto de perfil entre outras informações relevantes. | ALTA |
-|RF-004| O aplicativo deve comprovar a condição social dos pais do possível paciente. | ALTA |
-|RF-005| O aplicativo deve conter a localidade do possível paciente. | MEDIA |
-|RF-006| O aplicativo deve filtrar possíveis pacientes que aceitam atendimento à valor social daqueles que aceitam apenas atendimento gratuíto. | MEDIA |
-|RF-007| O aplicativo deve oferecer autenticação via email e senha, além de suporte para recuperação de senha. | ALTA |
-|RF-008| O aplicativo deve permitir reagendamento e cancelamento de sessões com notificação prévia. | MEDIA |
-
-
-### Requisitos não Funcionais
-
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O aplicativo deve ser compatível com dispositivos Android e iOS | ALTA | 
-|RNF-002| O aplicativo deve garantir segurança dos dados utilizando criptografia nas comunicações e armazenamento seguro de informações sensíveis.  |  ALTA | 
-|RNF-003| O aplicativo deve suportar ao menos 10.000 usuários simultaneamente sem degradação de desempenho. | MEDIA |
-|RNF-004| O tempo de resposta para carregamento das telas não deve ultrapassar 2 segundos. | BAIXA |
-|RNF-005| O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados (LGPD). | MEDIA |
-|RNF| O aplicativo deve apresentar as informações de forma estruturada e de fácil compreensão. | MEDIA |
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+<a href="img/matriz-rastreabilidade-requisitos.pdf"><img width="600px" src="img/matriz-rastreabilidade.jpg"></a>
 
 ## Restrições
 
