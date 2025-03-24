@@ -45,7 +45,7 @@ gantt
     Desenvolvimento do Banco de Dados:et2_t2, 2025-03-10,2025-04-20
 
     section Etapa 3
-    Desenvolvimento Interfaces Front-end Mobile:et3_t3, 2025-04-21,2025-05-18  
+    Desenvolvimento Interfaces Front-end:et3_t3, 2025-04-21,2025-05-18  
    
     section Etapa 4
     Diagnósticos:et4_t4, 2025-05-19  ,2025-06-15 
