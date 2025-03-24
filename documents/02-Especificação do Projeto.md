@@ -80,7 +80,7 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 ## Modelo ER (Projeto Conceitual)
 
-<img src="img/ModeloER.drawio.png" width = "800px">
+<img src="img/Modelo-ER.drawio.png" width = "700px">
 
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
