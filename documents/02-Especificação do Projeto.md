@@ -34,11 +34,11 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 
 | EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE`                                                                                          | PARA ... `MOTIVO/VALOR`                                                                                                                                                                                                                                                                                             |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Natalia Almeida   | Poder informar a pais ou responsáveis a disponibilidade de atendimento pedagógio para pessoas atípicas voluntário ou a custo social.                                                              |Ganhar mais experiência prática e auxiliar crianças e adolescentes em que os pais não tenham condição de pagar atendimento particular. |
+| Natalia Almeida   | Poder informar a pais ou responsáveis a disponibilidade de atendimento pedagógico para pessoas atípicas voluntário ou a custo social.                                                              |Ganhar mais experiência prática e auxiliar crianças e adolescentes em que os pais não tenham condição de pagar atendimento particular. |
 | Natalia Almeida   | Encontrar em mais detalhes perfis de crianças e adolescentes atípicos que precisam de atendimento. Com uma pequena biografia da trajetória pedagógica, tipos de transtornos, dificuldades e/ou deficiências, foto de perfil entre outras informações relevantes.                                                              |Selecionar os perfis que tenho condições de atender de forma social. |
 | Natalia Almeida   | Identificar e comprovar a condição social dos pais do possível paciente.                                                              |Garantir a acessibilidade a quem de fato precisa, que não tenha condições financeiras para arcar com atendimento particular ou em clínicas.|
 | Natalia Almeida   | Identificar a localidade do possível paciente.                                                               |Saber se compensa mais atender no domicílio dele ou no meu. |
-| Natalia Almeida   | Filtrar possíveis pacientes que aceitem atendimento a valor social daqueles que aceitem apenas atendimento gratuíto.                                                              |Alinhar expectativas e possibilidades de atendimento, nem toda intervenção é possível a custo zero. |
+| Natalia Almeida   | Filtrar possíveis pacientes que aceitem atendimento a valor social daqueles que aceitem apenas atendimento gratuito.                                                              |Alinhar expectativas e possibilidades de atendimento, nem toda intervenção é possível a custo zero. |
 | Márcio José  | Encontrar psicopedagogos particulares dispostos a fazer trabalho voluntário ou a custo social.                                                              |Realizar o acompanhamento pedagógico do meu filho com transtorno do espectro autista.|
 | Márcio José  | Selecionar apenas profissionais próximos a minha localidade.                                                             |Optar por profissionais mais próximos, reduzindo custos com transporte.|
 | Márcio José  | Visualizar a imagem de perfil, o currículo e as formações do profissional. disponível.                                                             |Garantir a seleção de um profissional regulamentado para evitar fraudes ou abusos.|
@@ -80,7 +80,7 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 ## Modelo ER (Projeto Conceitual)
 
-<img src="img/ERquintoperiodo.drawio.png" width = "800px">
+<img src="img/Modelo-ER.drawio.png" width = "700px">
 
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
