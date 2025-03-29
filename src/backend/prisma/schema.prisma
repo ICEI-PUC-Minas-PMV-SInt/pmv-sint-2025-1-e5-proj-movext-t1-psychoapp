@@ -26,7 +26,7 @@ model Usuario {
 
   //Relacionamentos:
 
-  profissional Profissional?
+  profissional Profissional? 
   paciente     Paciente?
 }
 
@@ -39,7 +39,7 @@ model Profissional {
   //Relacionamentos:
 
   usuarioId String  @unique @db.ObjectId // Chave estrangeira
-  usuario   Usuario @relation(fields: [usuarioId], references: [id]) // Relacionamento com a tabela Usuario
+  usuario   Usuario @relation(fields: [usuarioId], references: [id], onDelete: Cascade) // Relacionamento com a tabela Usuario
 }
 
 model Paciente {
@@ -54,5 +54,5 @@ model Paciente {
   //Relacionamentos:
 
   usuarioId String  @unique @db.ObjectId // Chave estrangeira
-  usuario   Usuario @relation(fields: [usuarioId], references: [id]) // Relacionamento com a tabela Usuario
+  usuario   Usuario @relation(fields: [usuarioId], references: [id], onDelete: Cascade) // Relacionamento com a tabela Usuario
 }
