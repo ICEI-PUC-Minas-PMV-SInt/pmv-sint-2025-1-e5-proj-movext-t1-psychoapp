@@ -46,7 +46,7 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 
 O sistema segue uma arquitetura cliente-servidor com backend em Node.js e frontend em React Native, utilizando um banco de dados MongoDB (via Prisma ORM).
 
-# Diagrama de Fluxo da Arquitetura
+### Diagrama de Fluxo da Arquitetura
 
 [App Mobile (React Native)]
 ↓ HTTPS ↑
