@@ -44,7 +44,10 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 | Márcio José  | Visualizar a imagem de perfil, o currículo e as formações do profissional. disponível.                                                             |Garantir a seleção de um profissional regulamentado para evitar fraudes ou abusos.|
 ## Arquitetura e Tecnologias
 
-O sistema segue uma arquitetura cliente-servidor com backend em Node.js e frontend em React Native, utilizando um banco de dados MongoDB (via Prisma ORM).
+O sistema segue uma arquitetura **cliente-servidor** com:
+- **Backend**: Node.js + Express.js
+- **Frontend**: React Native (iOS/Android)
+- **Banco de Dados**: MongoDB (via Prisma ORM)
 
 ### Diagrama de Fluxo da Arquitetura
 
@@ -62,7 +65,6 @@ O sistema segue uma arquitetura cliente-servidor com backend em Node.js e fronte
 ├─ Pacientes (Perfis, Histórico)  
 └─ Agendamentos (Futura implementação)
 ```
----
 
 ### Tecnologias Definidas
 
@@ -73,18 +75,46 @@ O sistema segue uma arquitetura cliente-servidor com backend em Node.js e fronte
 | Navegação           | React Navigation                    |
 | Gerenciamento de Estado | Context API / Redux             |
 | UI/UX               | NativeBase ou React Native Paper    |
-| Acessibilidade      | React Native A11y                   |
+
 
 #### 2. **Backend (API RESTful)**
 | Componente       | Tecnologia                  |
 |------------------|-----------------------------|
-| Linguagem        | JavaScript (ES6+) / TypeScript |
+| Linguagem        | JavaScript                  |
 | Framework        | Express.js                  |
 | Autenticação     | JWT                         |
 | Upload de Imagens| Multer                      |
-| Validação        | Zod ou Joi                  |
-| Documentação     | Swagger (OpenAPI)           |
 
+#### 3. **Banco de Dados**
+| Componente | Tecnologia               |
+|------------|--------------------------|
+| SGBD       | MongoDB                  |
+| ORM        | Prisma Client            |
+| Cache      | Redis (Opcional)         |
+
+#### 4. **Infraestrutura**
+| Área           | Tecnologia                          |
+|----------------|-------------------------------------|
+| Hospedagem     | Azure App Service                  |
+| Banco de Dados | Azure Cosmos DB (MongoDB API)      |
+| CI/CD          | GitHub Actions                     |
+| Monitoramento  | Azure Application Insights         |
+
+### Fluxo de Comunicação
+1. **App Mobile** → API Gateway (Express.js)  
+   - Todas as requisições passam por um roteador central.
+2. **Autenticação JWT**  
+   - Validação via middleware `auth.js`.
+3. **Prisma ORM** → MongoDB  
+   - Consultas tipadas e seguras.
+
+### Justificativa das Escolhas
+| Tecnologia  | Vantagem                                   |
+|-------------|--------------------------------------------|
+| React Native| Cross-platform com código único            |
+| MongoDB     | Flexível para dados semi-estruturados      |
+| Prisma      | Tipagem forte + facilidade de manutenção   |
+| JWT         | Autenticação stateless e escalável         |
 
 ## Project Model Canvas
 
