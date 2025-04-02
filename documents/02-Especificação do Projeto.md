@@ -48,17 +48,20 @@ O sistema segue uma arquitetura cliente-servidor com backend em Node.js e fronte
 
 ### Diagrama de Fluxo da Arquitetura
 
-[App Mobile (React Native)]
-↓ HTTPS ↑
-[API Gateway (Express.js)]
-↓ ↑
-[Autenticação (JWT)] ←→ [Banco de Dados (MongoDB)]
-↓
-[Microserviços]
-├─ Usuários (CRUD)
-├─ Profissionais (Busca, Filtros)
-├─ Pacientes (Perfis, Histórico)
+
+```
+[App Mobile (React Native)]  
+        ↓ HTTPS ↑  
+[API Gateway (Express.js)]  
+        ↓       ↑  
+[Autenticação (JWT)]  ←→  [Banco de Dados (MongoDB)]  
+        ↓  
+[Microserviços]  
+├─ Usuários (CRUD)  
+├─ Profissionais (Busca, Filtros)  
+├─ Pacientes (Perfis, Histórico)  
 └─ Agendamentos (Futura implementação)
+```
 
 ## Project Model Canvas
 
