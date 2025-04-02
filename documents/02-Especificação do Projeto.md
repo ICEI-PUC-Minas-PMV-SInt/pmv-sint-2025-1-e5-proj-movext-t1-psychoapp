@@ -62,6 +62,29 @@ O sistema segue uma arquitetura cliente-servidor com backend em Node.js e fronte
 ├─ Pacientes (Perfis, Histórico)  
 └─ Agendamentos (Futura implementação)
 ```
+---
+
+### Tecnologias Definidas
+
+#### 1. **Frontend (Aplicativo Mobile)**
+| Componente          | Tecnologia                          |
+|---------------------|-------------------------------------|
+| Framework           | React Native                        |
+| Navegação           | React Navigation                    |
+| Gerenciamento de Estado | Context API / Redux             |
+| UI/UX               | NativeBase ou React Native Paper    |
+| Acessibilidade      | React Native A11y                   |
+
+#### 2. **Backend (API RESTful)**
+| Componente       | Tecnologia                  |
+|------------------|-----------------------------|
+| Linguagem        | JavaScript (ES6+) / TypeScript |
+| Framework        | Express.js                  |
+| Autenticação     | JWT                         |
+| Upload de Imagens| Multer                      |
+| Validação        | Zod ou Joi                  |
+| Documentação     | Swagger (OpenAPI)           |
+
 
 ## Project Model Canvas
 
