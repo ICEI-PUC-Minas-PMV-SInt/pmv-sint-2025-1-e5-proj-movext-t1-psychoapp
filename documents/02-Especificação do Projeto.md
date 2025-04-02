@@ -44,7 +44,21 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 | Márcio José  | Visualizar a imagem de perfil, o currículo e as formações do profissional. disponível.                                                             |Garantir a seleção de um profissional regulamentado para evitar fraudes ou abusos.|
 ## Arquitetura e Tecnologias
 
-o	Descreva brevemente a arquitetura definida para o projeto e as tecnologias a serem utilizadas. Sugere-se a criação de um diagrama de componentes da solução.
+O sistema segue uma arquitetura cliente-servidor com backend em Node.js e frontend em React Native, utilizando um banco de dados MongoDB (via Prisma ORM).
+
+# Diagrama de Fluxo da Arquitetura
+
+[App Mobile (React Native)]
+↓ HTTPS ↑
+[API Gateway (Express.js)]
+↓ ↑
+[Autenticação (JWT)] ←→ [Banco de Dados (MongoDB)]
+↓
+[Microserviços]
+├─ Usuários (CRUD)
+├─ Profissionais (Busca, Filtros)
+├─ Pacientes (Perfis, Histórico)
+└─ Agendamentos (Futura implementação)
 
 ## Project Model Canvas
 
