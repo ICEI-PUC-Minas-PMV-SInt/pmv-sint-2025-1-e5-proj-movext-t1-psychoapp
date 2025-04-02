@@ -53,17 +53,13 @@ O sistema segue uma arquitetura **cliente-servidor** com:
 
 
 ```
-[App Mobile (React Native)]  
-        ↓ HTTPS ↑  
-[API Gateway (Express.js)]  
-        ↓       ↑  
-[Autenticação (JWT)]  ←→  [Banco de Dados (MongoDB)]  
-        ↓  
-[Microserviços]  
-├─ Usuários (CRUD)  
-├─ Profissionais (Busca, Filtros)  
-├─ Pacientes (Perfis, Histórico)  
-└─ Agendamentos (Futura implementação)
+    A[App Mobile\nReact Native] -->|HTTPS| B[API Gateway\nExpress.js]
+    B --> C[Autenticação\nJWT]
+    C --> D[Banco de Dados\nMongoDB]
+    C --> E[Microserviços]
+    E --> E1[Usuários\nCRUD]
+    E --> E2[Profissionais\nBusca/Filtros]
+    E --> E3[Pacientes\nPerfis/Histórico]
 ```
 
 ### Tecnologias Definidas
