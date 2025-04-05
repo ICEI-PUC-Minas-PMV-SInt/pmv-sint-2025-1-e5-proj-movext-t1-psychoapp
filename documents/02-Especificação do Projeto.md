@@ -172,7 +172,7 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 ---
 
-#### Papéis e Responsabilidades  
+## Papéis e Responsabilidades  
 
 | Função                   | Integrante          | Descrição                                                                 |  
 |--------------------------|---------------------|---------------------------------------------------------------------------|  
@@ -185,9 +185,9 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 | **DBA**                   | Isabella Cristina  | Modelagem e otimização do banco de dados.                                |  
 ---
 
-##### Cronograma por Etapa  
+### Cronograma por Etapa  
 
-###### **Etapa 1** -  03/02/25 a 09/03/25
+### **Etapa 1** -  03/02/25 a 09/03/25
 
 | Tarefa                                                                 | Responsáveis                          | Duração      |  
 |------------------------------------------------------------------------|---------------------------------------|--------------|  
@@ -200,7 +200,7 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 ---
 
-###### **Etapa 2** - 10/03/25 a 20/04/25
+### **Etapa 2** - 10/03/25 a 20/04/25
 
 | Tarefa                                                                 | Responsáveis                          | Duração      |  
 |------------------------------------------------------------------------|---------------------------------------|--------------|  
@@ -215,18 +215,18 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 ---
 
-###### **Etapa 3** - 21/04/25 a 18/05/25
+### **Etapa 3** - 21/04/25 a 18/05/25
 
 | Tarefa                                                                 | Responsáveis                          | Duração      |  
 |------------------------------------------------------------------------|---------------------------------------|--------------|  
-| Documentação do projeto de interface e o fluxo de telas do sistema de uma aplicação mobile | UX Designer                           | 1 semana     |  
-| Implementação do projeto de interface, fluxo de telas do sistema de uma aplicação mobile e testes de unidade | Dev Mobile + UX Designer              | 2 semanas    |  
+| Documentação do projeto de interface e o fluxo de telas do sistema de uma aplicação mobile | UX Designer       | 1 semana     |  
+| Implementação do projeto de interface, fluxo de telas do sistema de uma aplicação mobile e testes de unidade | Dev Mobile + UX Designer | 2 semanas    |  
 | Planos de Testes de Funcionalidades e Usabilidade                      | QA + UX Designer                      | 1 semana     | 
 | Registros de Testes de Funcionalidades e Usabilidade                   | QA + UX Designer                      | 1 semana     |  
 
 ---
 
-###### **Etapa 4** - 19/05/25 a 15/06/25
+### **Etapa 4** - 19/05/25 a 15/06/25
 
 | Tarefa                                                                 | Responsáveis          | Duração      |  
 |------------------------------------------------------------------------|-----------------------|--------------|  
