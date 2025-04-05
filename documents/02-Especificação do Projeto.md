@@ -193,10 +193,10 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 |------------------------------------------------------------------------|---------------------------------------|--------------|  
 | Documento de Contexto                                                  | Analista + Gerente                    | 1 semana     |  
 | Especificação do Problema                                              | Analista + Gerente                    | 1 semana     |  
-| Documentação dos perfis de usuários, suas necessidades e Personas.     | Gerente + Analista                    | 2 semanas    |  
-| Análise de Viabilidade da solução                                      | Dev Mobile + UX Designer              | 1 semana     |
-| Documentação da Arquitetura Mobile                                     | Dev Mobile + UX Designer              | 1 semana     |
-| Documentação dos requisitos funcionais e não funcionais do projeto de acordo com o contexto levantado| Dev Mobile + UX Designer              | 1 semana     |
+| Documentação dos perfis de usuários, suas necessidades e Personas.     | Gerente + Analista                    | 1 semana    |  
+| Análise de Viabilidade da solução                                      | Gerente + Analista                    | 1 semana     |
+| Documentação da Arquitetura Mobile                                     | Gerente                               | 3 dias     |
+| Documentação dos requisitos funcionais e não funcionais do projeto de acordo com o contexto levantado| Analista              | 2dias     |
 
 ---
 
