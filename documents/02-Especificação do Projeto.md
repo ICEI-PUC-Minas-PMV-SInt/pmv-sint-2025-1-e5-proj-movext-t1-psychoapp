@@ -219,9 +219,10 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 | Tarefa                                                                 | Responsáveis                          | Duração      |  
 |------------------------------------------------------------------------|---------------------------------------|--------------|  
-| Documentação do Fluxo de Telas                                         | UX Designer                           | 1 semana     |  
-| Implementação da Interface Mobile                                      | Dev Mobile + UX Designer              | 2 semanas    |  
-| Testes de Funcionalidade e Usabilidade                                 | QA + UX Designer                      | 1 semana     |  
+| Documentação do projeto de interface e o fluxo de telas do sistema de uma aplicação mobile | UX Designer                           | 1 semana     |  
+| Implementação do projeto de interface, fluxo de telas do sistema de uma aplicação mobile e testes de unidade | Dev Mobile + UX Designer              | 2 semanas    |  
+| Planos de Testes de Funcionalidades e Usabilidade                      | QA + UX Designer                      | 1 semana     | 
+| Registros de Testes de Funcionalidades e Usabilidade                   | QA + UX Designer                      | 1 semana     |  
 
 ---
 
@@ -229,18 +230,9 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 | Tarefa                                                                 | Responsáveis          | Duração      |  
 |------------------------------------------------------------------------|-----------------------|--------------|  
-| Vídeo e PDF de Apresentação                                            | Gerente + Equipe      | 3 dias       |  
-| Apresentação Final                                                     | Todos                 | 1 dia        |  
+| Considerações Finais                                                   | Gerente + Equipe      | 2 semnas     |  
+| Entrega de Vídeo de Apresentação Final e PDF usado na Apresentação     | Todos                 | 1 semana     |  
+| Realização da Apresentação Final                                       | Todos                 | 1 semana     |  
 
----
-
-###### Alocação de Recursos  
-
-| Pessoa                  | Etapa 1 | Etapa 2 | Etapa 3 |  
-|-------------------------|---------|---------|---------|  
-| Desenvolvedor Mobile    | 20%     | 50%     | 30%     |  
-| UX Designer             | 40%     | 10%     | 50%     |  
-
-*(% representa dedicação semanal estimada)*  
  
 
