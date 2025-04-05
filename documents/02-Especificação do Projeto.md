@@ -187,30 +187,32 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 ##### Cronograma por Etapa  
 
-###### **Etapa 1 – Documentação e Análise** -  03/02/25 a 09/03/25
+###### **Etapa 1** -  03/02/25 a 09/03/25
 
 | Tarefa                                                                 | Responsáveis                          | Duração      |  
 |------------------------------------------------------------------------|---------------------------------------|--------------|  
-| Documento de Contexto e Especificação do Problema                      | Analista + Gerente                    | 1 semana     |  
-| Perfis de Usuários e Personas                                          | Analista + UX Designer                | 1 semana     |  
-| Análise de Viabilidade                                                 | Gerente + Analista                    | 3 dias       |  
-| Arquitetura Mobile e Requisitos                                        | Dev Mobile + UX Designer              | 2 semanas    |  
+| Documento de Contexto                                                  | Analista + Gerente                    | 1 semana     |  
+| Especificação do Problema                                              | Analista + Gerente                    | 1 semana     |  
+| Documentação dos perfis de usuários, suas necessidades e Personas.     | Gerente + Analista                    | 2 semanas    |  
+| Análise de Viabilidade da solução                                      | Dev Mobile + UX Designer              | 1 semana     |
+| Documentação da Arquitetura Mobile                                     | Dev Mobile + UX Designer              | 1 semana     |
+| Documentação dos requisitos funcionais e não funcionais do projeto de acordo com o contexto levantado| Dev Mobile + UX Designer              | 1 semana     |
 
 ---
 
-###### **Etapa 2 – Desenvolvimento Técnico**  
+###### **Etapa 2** - 10/03/25 a 20/04/25
 
 | Tarefa                                                                 | Responsáveis                          | Duração      |  
 |------------------------------------------------------------------------|---------------------------------------|--------------|  
-| Programação de Funcionalidades                                         | Dev Mobile                            | 3 semanas    |  
+| Programação de Funcionalidades                                         | Dev Mobile                            | 2 semanas    |  
 | Criação de Indicadores (Dashboards)                                    | Dev Back-end + Analista               | 1 semana     |  
 | Modelagem do Banco de Dados                                            | DBA + Dev Back-end                    | 1 semana     |  
-| Implementação do Banco + API                                           | Dev Back-end                          | 2 semanas    |  
+| Implementação do Banco + API                                           | Dev Back-end                          | 1 semana     |  
 | Testes de Unidade                                                      | QA + Devs                             | 1 semana     |  
 
 ---
 
-###### **Etapa 3 – Interface e Testes**  
+###### **Etapa 3** - 21/04/25 a 18/05/25
 
 | Tarefa                                                                 | Responsáveis                          | Duração      |  
 |------------------------------------------------------------------------|---------------------------------------|--------------|  
@@ -220,7 +222,7 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 ---
 
-###### **Considerações Finais**  
+###### **Etapa 4** - 19/05/25 a 15/06/25
 
 | Tarefa                                                                 | Responsáveis          | Duração      |  
 |------------------------------------------------------------------------|-----------------------|--------------|  
