@@ -187,7 +187,7 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 ##### Cronograma por Etapa  
 
-###### **Etapa 1 – Documentação e Análise**  
+###### **Etapa 1 – Documentação e Análise** -  03/02/25 a 09/03/25
 
 | Tarefa                                                                 | Responsáveis                          | Duração      |  
 |------------------------------------------------------------------------|---------------------------------------|--------------|  
