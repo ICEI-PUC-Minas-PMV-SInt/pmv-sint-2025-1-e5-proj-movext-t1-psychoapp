@@ -196,7 +196,7 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 | Documentação dos perfis de usuários, suas necessidades e Personas.     | Gerente + Analista                    | 1 semana    |  
 | Análise de Viabilidade da solução                                      | Gerente + Analista                    | 1 semana     |
 | Documentação da Arquitetura Mobile                                     | Gerente                               | 3 dias     |
-| Documentação dos requisitos funcionais e não funcionais do projeto de acordo com o contexto levantado| Analista              | 2dias     |
+| Documentação dos requisitos funcionais e não funcionais do projeto de acordo com o contexto levantado| Analista              | 2 dias     |
 
 ---
 
@@ -204,11 +204,14 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 | Tarefa                                                                 | Responsáveis                          | Duração      |  
 |------------------------------------------------------------------------|---------------------------------------|--------------|  
-| Programação de Funcionalidades                                         | Dev Mobile                            | 2 semanas    |  
-| Criação de Indicadores (Dashboards)                                    | Dev Back-end + Analista               | 1 semana     |  
-| Modelagem do Banco de Dados                                            | DBA + Dev Back-end                    | 1 semana     |  
-| Implementação do Banco + API                                           | Dev Back-end                          | 1 semana     |  
-| Testes de Unidade                                                      | QA + Devs                             | 1 semana     |  
+| Programação de Funcionalidades                                         | Dev Mobile                            | 1 semana    |  
+| Criar tabelas, gráficos ou dashboards com no mínimo 5 indicadores de desempenho e metas para o processo de negócio| Dev Back-end | 1 semana     |  
+| Planejamento de atividades com ciclo de vida atrelado aos processos    | Gerente                    | 1 semana     |  
+| Definição de Banco de Dados (Relacional ou Não-Relacional)             | DBA + Dev Back-end                    | 1 semana     |  
+| Documentação com a justificativa e avaliação do modelo de dados escolhido para o contexto da aplicação | Dev Back-end                          | 1 semana     |  
+| Implementação das funcionalidades que envolvem o banco de dados escolhido para armazenamento e recuperação de dados | DBA + Dev Back-end | 2 dias     |  
+| Implementação de rotas de acesso ao banco, preferencialmente por meio de API | DBA + Dev Back-end                    | 2 dias     |  
+| Efetuar testes de unidade                                              | QA | 1 dia    |  
 
 ---
 
