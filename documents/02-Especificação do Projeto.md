@@ -230,7 +230,7 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 
 | Tarefa                                                                 | Responsáveis          | Duração      |  
 |------------------------------------------------------------------------|-----------------------|--------------|  
-| Considerações Finais                                                   | Gerente + Equipe      | 2 semnas     |  
+| Considerações Finais                                                   | Todos                 | 2 semnas     |  
 | Entrega de Vídeo de Apresentação Final e PDF usado na Apresentação     | Todos                 | 1 semana     |  
 | Realização da Apresentação Final                                       | Todos                 | 1 semana     |  
 
