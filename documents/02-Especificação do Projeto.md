@@ -165,3 +165,77 @@ O projeto da base de dados corresponde à representação das entidades e relaci
 ## Modelagem dos processos : notação BPMN
 
 <img src="img/BPMN.png">
+
+### Cronograma de Pessoal   
+
+**Objetivo**: Definir a alocação de recursos humanos por etapa e tarefa do projeto.  
+
+---
+
+#### Papéis e Responsabilidades  
+
+| Função                   | Integrante          | Descrição                                                                 |  
+|--------------------------|---------------------|---------------------------------------------------------------------------|  
+| **Gerente de Projeto**    | Danilo Henrique    | Coordenação geral, prazos e comunicação com stakeholders.                |  
+| **Analista de Requisitos**| Elisabete Romana   | Documentação (problema, personas, requisitos).                           |  
+| **UX/UI Designer**        | Danilo Henrique    | Protótipos de telas, fluxo de navegação.                                 |  
+| **Desenvolvedor Mobile**  | Alicia Ribeiro     | Programação das funcionalidades e testes unitários.                      |  
+| **Desenvolvedor Back-end**| Isabella Cristina  | API, modelagem do banco de dados e rotas.                                |  
+| **QA (Testador)**         | Nickolas Ribeiro   | Testes (unidade, funcionalidade, usabilidade).                           |  
+| **DBA**                   | Isabella Cristina  | Modelagem e otimização do banco de dados.                                |  
+---
+
+##### Cronograma por Etapa  
+
+###### **Etapa 1 – Documentação e Análise**  
+
+| Tarefa                                                                 | Responsáveis                          | Duração      |  
+|------------------------------------------------------------------------|---------------------------------------|--------------|  
+| Documento de Contexto e Especificação do Problema                      | Analista + Gerente                    | 1 semana     |  
+| Perfis de Usuários e Personas                                          | Analista + UX Designer                | 1 semana     |  
+| Análise de Viabilidade                                                 | Gerente + Analista                    | 3 dias       |  
+| Arquitetura Mobile e Requisitos                                        | Dev Mobile + UX Designer              | 2 semanas    |  
+
+---
+
+###### **Etapa 2 – Desenvolvimento Técnico**  
+
+| Tarefa                                                                 | Responsáveis                          | Duração      |  
+|------------------------------------------------------------------------|---------------------------------------|--------------|  
+| Programação de Funcionalidades                                         | Dev Mobile                            | 3 semanas    |  
+| Criação de Indicadores (Dashboards)                                    | Dev Back-end + Analista               | 1 semana     |  
+| Modelagem do Banco de Dados                                            | DBA + Dev Back-end                    | 1 semana     |  
+| Implementação do Banco + API                                           | Dev Back-end                          | 2 semanas    |  
+| Testes de Unidade                                                      | QA + Devs                             | 1 semana     |  
+
+---
+
+###### **Etapa 3 – Interface e Testes**  
+
+| Tarefa                                                                 | Responsáveis                          | Duração      |  
+|------------------------------------------------------------------------|---------------------------------------|--------------|  
+| Documentação do Fluxo de Telas                                         | UX Designer                           | 1 semana     |  
+| Implementação da Interface Mobile                                      | Dev Mobile + UX Designer              | 2 semanas    |  
+| Testes de Funcionalidade e Usabilidade                                 | QA + UX Designer                      | 1 semana     |  
+
+---
+
+###### **Considerações Finais**  
+
+| Tarefa                                                                 | Responsáveis          | Duração      |  
+|------------------------------------------------------------------------|-----------------------|--------------|  
+| Vídeo e PDF de Apresentação                                            | Gerente + Equipe      | 3 dias       |  
+| Apresentação Final                                                     | Todos                 | 1 dia        |  
+
+---
+
+###### Alocação de Recursos  
+
+| Pessoa                  | Etapa 1 | Etapa 2 | Etapa 3 |  
+|-------------------------|---------|---------|---------|  
+| Desenvolvedor Mobile    | 20%     | 50%     | 30%     |  
+| UX Designer             | 40%     | 10%     | 50%     |  
+
+*(% representa dedicação semanal estimada)*  
+ 
+
