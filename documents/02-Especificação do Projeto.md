@@ -162,9 +162,44 @@ A referência abaixo irá auxiliá-lo na geração do artefato “Modelo ER”.
 
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
 
-## Modelagem dos processos : notação BPMN
+## Modelagem dos processos 
 
-<img src="img/BPMN.png">
+### Situação atual do Projeto:
+No momento, o projeto conta com uma API Node.js que corresponde ao backend da nossa aplicação que está conectada a um banco de dados MongoDB.
+
+<img src="img/BPMN1.png" width = "700px">
+
+### Situação Futura do Projeto:
+
+<img src="img/BPMN.png" width = "700px">
+
+## Gerenciamento de Cronograma
+### Cronograma de Tarefas
+
+```mermaid
+gantt
+    title Cronograma de Tarefas
+    dateFormat  YYYY-MM-DD
+    todayMarker off
+    
+    section Etapa 1
+    Concepção do Projeto:et1_t1, 2025-02-03,2025-03-09
+    Proposta de Solução:et1_t1, 2025-02-03,2025-03-09
+    Definição da Proposta de Trabalho:et1_t1, 2025-02-03,2025-03-09
+    Elaboração Inicial do Projeto Arquitetural:et1_t1, 2025-02-03,2025-03-09
+        
+    section Etapa 2
+    Desenvolvimento Back-end:et2_t2, 2025-03-10,2025-04-20
+    Desenvolvimento do Banco de Dados:et2_t2, 2025-03-10,2025-04-20
+
+    section Etapa 3
+    Desenvolvimento Interfaces Front-end:et3_t3, 2025-04-21,2025-05-18  
+   
+    section Etapa 4
+    Diagnósticos:et4_t4, 2025-05-19  ,2025-06-15 
+    Entrega da solução:et4_t4, 2025-05-19  ,2025-06-15 
+    Apresentação:et4_t4, 2025-05-19  ,2025-06-15
+```
 
 ### Cronograma de Pessoal   
 
