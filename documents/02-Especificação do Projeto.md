@@ -162,6 +162,11 @@ A referência abaixo irá auxiliá-lo na geração do artefato “Modelo ER”.
 
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
 
+## Diagrama de arquitetura da aplicação
+O diagrama abaixo representa uma arquitetura cliente-servidor baseada em uma aplicação mobile desenvolvida em React Native que se comunica com um servidor Node.js e um banco de dados MongoDB.
+
+<img src="img/Diagrama de arquitetura.png">
+
 ## Modelagem dos processos 
 
 ### Situação atual do Projeto:
