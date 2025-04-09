@@ -205,13 +205,32 @@ gantt
     Entrega da solução:et4_t4, 2025-05-19  ,2025-06-15 
     Apresentação:et4_t4, 2025-05-19  ,2025-06-15
 ```
+### Cronograma de Custos
+
+**Objetivo**: Planejar, controlar e monitorar gastos ao longo do tempo.
+
+---
+## Planejamento de Custos
+
+| Ítem                        | Descrição                                          |Custo Estimado   |                 
+|-----------------------------|----------------------------------------------------|-----------------|
+|**Servidor na Nuvem**        |Infraestrutura de Nuvem                              |1200/mês        |
+|**Banco de Dados**           |Configuração e Manutençaõ                            |1500/mês        |
+|**Domínio e SSL**            |Hospedagem e segurança do app                        |100/mês         |
+|**Desenvolvedores**          |Backend e Frontend                                   |6000/mês        |
+|**Designer**                 |Criação da interface do usuário                      |4000/mês        |
+|**Gerente de projeto**       |Coordenação do desenvolvimento                       |8000/mês        |
+|**Profissional de Marketing**|Divulagação  e crescimento da base de usuários       |5000/mês        |  
+|**Teste QA**                 |Testes para garantir o funcionamento correto         |5000/mês        |                
+|**Total**                    |                                                     |30800/mês       |
+---     
 
 ### Cronograma de Pessoal   
 
 **Objetivo**: Definir a alocação de recursos humanos por etapa e tarefa do projeto.  
 
 ---
-
+ 
 ## Papéis e Responsabilidades  
 
 | Função                   | Integrante          | Descrição                                                                 |  
