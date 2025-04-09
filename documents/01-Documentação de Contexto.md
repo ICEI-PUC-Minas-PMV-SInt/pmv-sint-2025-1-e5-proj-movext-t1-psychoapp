@@ -25,30 +25,3 @@ A Extensão Universitária é um dos pilares fundamentais da universidade, ao la
 
 O parceiro é um profissional regulamentado na área de psicopedagogia, que realiza regularmente atendimentos particulares e também em clínicas conveniadas a planos de saúde. Não somente a esse parceiro, o app visa atender uma demanda generalizada, sendo útil também a profissionais com perfil semelhante.
 
-## Gerenciamento de Cronograma
-### Cronograma de Tarefas
-
-```mermaid
-gantt
-    title Cronograma de Tarefas
-    dateFormat  YYYY-MM-DD
-    todayMarker off
-    
-    section Etapa 1
-    Concepção do Projeto:et1_t1, 2025-02-03,2025-03-09
-    Proposta de Solução:et1_t1, 2025-02-03,2025-03-09
-    Definição da Proposta de Trabalho:et1_t1, 2025-02-03,2025-03-09
-    Elaboração Inicial do Projeto Arquitetural:et1_t1, 2025-02-03,2025-03-09
-        
-    section Etapa 2
-    Desenvolvimento Back-end:et2_t2, 2025-03-10,2025-04-20
-    Desenvolvimento do Banco de Dados:et2_t2, 2025-03-10,2025-04-20
-
-    section Etapa 3
-    Desenvolvimento Interfaces Front-end:et3_t3, 2025-04-21,2025-05-18  
-   
-    section Etapa 4
-    Diagnósticos:et4_t4, 2025-05-19  ,2025-06-15 
-    Entrega da solução:et4_t4, 2025-05-19  ,2025-06-15 
-    Apresentação:et4_t4, 2025-05-19  ,2025-06-15
-```
