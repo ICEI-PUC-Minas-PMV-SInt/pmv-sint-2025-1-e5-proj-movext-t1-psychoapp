@@ -2,7 +2,7 @@ import express from "express";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import { PrismaClient } from "@prisma/client";
-import upload from "../multer.js";
+import { upload, uploadToGoogleDrive } from "../multer.js";
 
 const router = express.Router();
 
@@ -50,13 +50,24 @@ router.post(
     try {
       const prisma = new PrismaClient();
       const dadosInformados = req.body;
-      const profileimg = req.file ? req.file.filename : null;
 
+      // Verifica se o arquivo foi enviado
+      if (!req.file) {
+        return res.status(400).json({ message: "Imagem de perfil não enviada." });
+      }
+
+      const filePath = req.file.path;
+      const fileName = req.file.filename;
+
+      // Faz o upload da imagem para o Google Drive
+      const googleDriveFileId = await uploadToGoogleDrive(filePath, fileName);
+
+      // Salva os dados no banco de dados
       await prisma.profissional.create({
         data: {
           tipoAtendimento: dadosInformados.tipoAtendimento,
           trajetoriaProfissional: dadosInformados.trajetoriaProfissional,
-          profileimg: profileimg,
+          profileimg: googleDriveFileId, // Salva o ID do arquivo no Google Drive
           usuarioId: dadosInformados.usuarioId,
         },
       });
@@ -65,8 +76,9 @@ router.post(
         .status(201)
         .json({ message: `Perfil de profissional associado com sucesso.` });
     } catch (err) {
+      console.error("Erro ao cadastrar profissional:", err);
       res.status(500).json({
-        message: `Erro ao cadastrar usuário. O servidor retornou: ${err}`,
+        message: `Erro ao cadastrar profissional. O servidor retornou: ${err}`,
       });
     }
   }
@@ -79,10 +91,21 @@ router.post(
     try {
       const prisma = new PrismaClient();
       const dadosInformados = req.body;
-      const profileimg = req.file ? req.file.filename : null;
+
+      // Verifica se o arquivo foi enviado
+      if (!req.file) {
+        return res.status(400).json({ message: "Imagem de perfil não enviada." });
+      }
+
+      const filePath = req.file.path;
+      const fileName = req.file.filename;
+
+      // Faz o upload da imagem para o Google Drive
+      const googleDriveFileId = await uploadToGoogleDrive(filePath, fileName);
 
       const diagnostico = dadosInformados.diagnostico === "true";
 
+      // Salva os dados no banco de dados
       await prisma.paciente.create({
         data: {
           necessidadeAtendimento: dadosInformados.necessidadeAtendimento,
@@ -90,7 +113,7 @@ router.post(
           qualDiagnostico: dadosInformados.qualDiagnostico,
           encaminhamento: dadosInformados.encaminhamento,
           queixas: dadosInformados.queixas,
-          profileimg: profileimg,
+          profileimg: googleDriveFileId, // Salva o ID do arquivo no Google Drive
           usuarioId: dadosInformados.usuarioId,
         },
       });
@@ -99,8 +122,9 @@ router.post(
         .status(201)
         .json({ message: `Perfil de paciente associado com sucesso.` });
     } catch (err) {
+      console.error("Erro ao cadastrar paciente:", err);
       res.status(500).json({
-        message: `Erro ao cadastrar usuário. O servidor retornou: ${err}`,
+        message: `Erro ao cadastrar paciente. O servidor retornou: ${err}`,
       });
     }
   }
