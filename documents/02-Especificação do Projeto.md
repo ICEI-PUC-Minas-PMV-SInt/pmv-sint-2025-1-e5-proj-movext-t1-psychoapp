@@ -91,16 +91,16 @@ O sistema segue uma arquitetura **cliente-servidor** com:
 #### 4. **Infraestrutura**
 | Área           | Tecnologia                          |
 |----------------|-------------------------------------|
-| Hospedagem     | Azure App Service                  |
-| Banco de Dados | Azure Cosmos DB (MongoDB API)      |
+| Hospedagem     | GitHub / Vercel                 |
+| Banco de Dados | Mongo DB (Prisma ORM)      |
 | CI/CD          | GitHub Actions                     |
-| Monitoramento  | Azure Application Insights         |
+|   |      |
 
 ### Fluxo de Comunicação
 1. **App Mobile** → API Gateway (Express.js)  
    - Todas as requisições passam por um roteador central.
 2. **Autenticação JWT**  
-   - Validação via middleware `auth.js`.
+   - Validação para rotas privadas do backend via middleware `auth.js`.
 3. **Prisma ORM** → MongoDB  
    - Consultas tipadas e seguras.
 
@@ -112,18 +112,12 @@ O sistema segue uma arquitetura **cliente-servidor** com:
 | Prisma      | Tipagem forte + facilidade de manutenção   |
 | JWT         | Autenticação stateless e escalável         |
 
-## Project Model Canvas
-
-Colocar a imagem do modelo construído apresentando a proposta de solução.
-
-> **Links Úteis**:
-> Disponíveis em material de apoio do projeto
 
 ## Requisitos
 
 A tabela que se segue apresenta a matriz de rastreabilidade dos requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
-<a href="img/matriz-rastreabilidade-requisitos.pdf"><img width="600px" src="img/matriz-rastreabilidade.jpg"></a>
+<img width="800px" src="img/matriz-rastreabilidade-requisitos.jpg">
 
 ## Restrições
 
@@ -131,14 +125,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até julho de 2025 |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+|01| O projeto deverá ser apresentado e entregue até o final do 1º semestre letivo de 2025 |
 
 ## Diagrama de Casos de Uso
 
@@ -148,19 +135,9 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 <img src="img/Modelo-ER.drawio.png" width = "700px">
 
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
-
-Sugestão de ferramentas para geração deste artefato: LucidChart e Draw.io.
-
-A referência abaixo irá auxiliá-lo na geração do artefato “Modelo ER”.
-
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
-
 ## Projeto da Base de Dados
 
 <img src="img/Psichoapp (1).png">  
-
-O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
 
 ## Diagrama de arquitetura da aplicação
 O diagrama abaixo representa uma arquitetura cliente-servidor baseada em uma aplicação mobile desenvolvida em React Native que se comunica com um servidor Node.js e um banco de dados MongoDB.
