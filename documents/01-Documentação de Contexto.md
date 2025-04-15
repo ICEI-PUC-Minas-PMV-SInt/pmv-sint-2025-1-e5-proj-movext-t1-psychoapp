@@ -25,3 +25,16 @@ A Extensão Universitária é um dos pilares fundamentais da universidade, ao la
 
 O parceiro é um profissional regulamentado na área de psicopedagogia, que realiza regularmente atendimentos particulares e também em clínicas conveniadas a planos de saúde. Não somente a esse parceiro, o app visa atender uma demanda generalizada, sendo útil também a profissionais com perfil semelhante.
 
+## Potencialidades e Oportunidades
+
+A identificação das potencialidades e das oportunidades de melhoria é essencial para compreender os pontos fortes do projeto e reconhecer os aspectos que podem ser aperfeiçoados. No caso do aplicativo proposto, que visa facilitar o acesso à psicopedagogia para crianças e adolescentes atípicos, essas análises revelam tanto o impacto positivo que a iniciativa pode gerar quanto os cuidados necessários para seu pleno funcionamento. A seguir, são destacados os principais pontos:
+
+- Potencialidades
+  - Impacto social significativo: O projeto contribui para a democratização do acesso a atendimentos psicopedagógicos, promovendo inclusão e suporte educacional adequado a crianças e adolescentes com necessidades específicas.
+  - Integração entre universidade e sociedade: Alinhado aos princípios da extensão universitária, o projeto fortalece o vínculo entre instituições de ensino superior e a sociedade, incentivando ações transformadoras e de responsabilidade social.
+  - Benefícios para os profissionais envolvidos: Oportunidade de aumentar a rede de contatos, conquistar novos clientes e obter visibilidade profissional.
+
+- Oportunidades
+  - Segurança de dados sensíveis: É fundamental garantir a proteção das informações pessoais dos usuários, especialmente considerando que o público-alvo inclui menores de idade em situação de vulnerabilidade.
+  - Acessibilidade da interface: O aplicativo deve ser desenvolvido com foco em acessibilidade, contemplando pessoas com dificuldades cognitivas ou motoras, assegurando usabilidade plena aos usuários.
+  - Divulgação e adesão dos usuários: Desenvolver estratégias para garantir adesão das famílias e criar confiança no uso do app.
