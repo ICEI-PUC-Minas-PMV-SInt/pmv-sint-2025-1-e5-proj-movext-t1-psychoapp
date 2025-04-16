@@ -146,8 +146,50 @@ O diagrama abaixo representa uma arquitetura cliente-servidor baseada em uma apl
 
 ## Modelagem dos processos 
 
-### Situação atual do Projeto:
-No momento, o projeto conta com uma API Node.js que corresponde ao backend da nossa aplicação que está conectada a um banco de dados MongoDB.
+### Situação atual do processo de negócio:
+
+### Estrutura do Processo Atual
+
+Hoje a aplicação conta com um backend (Node.js) e banco de dados (MongoDB) que gerenciam informações de usuários e  suas interações.
+
+#### Fluxo do Sistema:
+
+**Pacientes** se cadastram e buscam profissionais disponíveis.
+
+**Psicopedagogos** se cadastram e oferecem serviços acessíveis ou gratuitos.
+
+#### Desafios e Problemas Potenciais
+
+- Alcance de usuários: Como os pacientes e profissionais ficam sabendo do aplicativo? Qual será a estratégia de divulgação? 
+- Garantia de qualidade: Como vamos nos assegurar que os profissionais cadastrados têm qualificações adequadas?
+- Experiencia do usuário: O fluxo dentro do aplicativo é intuitivo e fácil de usar.
+- Sustentabilidade do modelo: Existe algum tipo de monetização para cobrir custos operacionais?
+  
+#### Indicadores de Desempenho
+
+##### Indicadores Quantitativos:
+
+- Número de pacientes cadastrados: Quantos usuários carentes estão acessando a plataforma?
+- Número de psicopedagogos ativos: Quantos profissionais estão oferecendo atendimentos?
+- Tempo médio para conexão entre pacientes e profissionais.
+  
+##### Indicadores Qualitativos: 
+
+- Feedbacks dos usuários sobre a experiência com o aplicativo.
+- Usabilidade da aplicação: O aplicativo é fácil de usar e intuitivo?
+  
+##### Indicadores de Crescimento: 
+
+- Taxa de novos cadastros: O número de usuários está crescendo?
+- Expansão geográfica: O aplicativo está atingindo novas cidades ou regiões?
+
+#### Oportunidades e Melhorias
+
+- Automação de processos: Melhorias na filtragem de profissionais por especialização e localização.
+- Integração com outros serviços: Como Instagram e YouTub para promover o aplicativo.
+- Oferecer incentivos para profissionais que realizam atendimentos gratuitos ou tem boas avaliações.
+
+### Modelo BPMN da Situação Atual do processo de negócio:
 
 <img src="img/BPMN1.png" width = "700px">
 
