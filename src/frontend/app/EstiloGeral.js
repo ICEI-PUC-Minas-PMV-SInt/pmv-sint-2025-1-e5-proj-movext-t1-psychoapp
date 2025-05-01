@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import {useFonts, PlaypenSans_400Regular, PlaypenSans_700Bold} from '@expo-google-fonts/playpen-sans'
 
 const EstiloGeral = StyleSheet.create({
 
@@ -7,8 +6,7 @@ const EstiloGeral = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fffaf5',
         alignItems: 'center',
-        justifyContent: 'flex-start',
-        gap: 30,
+        justifyContent: 'flex-start',  
     },
 
     homeCenter:{
@@ -28,6 +26,22 @@ const EstiloGeral = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingHorizontal: 20,
+    },
+
+    subHeader:{
+        backgroundColor: 'rgba(106, 181, 77, 0.7)',
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingTop: 15,
+        paddingBottom: 15,
+    },
+
+    conteudoSubHeader:{
+        fontFamily: 'PlaypenSans_400Regular',
+        fontSize: 16,
+        color: 'white',
+        textAlign: 'center'
     },
 
     tituloHeader:{
@@ -55,6 +69,7 @@ const EstiloGeral = StyleSheet.create({
         width: '100%',
         height: 130,
         backgroundColor: '#6ab54d',
+        display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
@@ -69,6 +84,7 @@ const EstiloGeral = StyleSheet.create({
     },
 
     botao:{
+        marginTop: 10,
         backgroundColor: 'white',
         width: 200,
         height: 40,
@@ -98,7 +114,50 @@ const EstiloGeral = StyleSheet.create({
 
     areaBotoesHome:{
         gap: 15,
+    },
+
+    containerInputsGeral:{
+        width: '100%',
+        gap: 15,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 20,
+    },
+
+    inputContainer:{
+        width:'80%',
+    },
+
+    label:{
+        fontFamily: 'PlaypenSans_700Bold',
+        fontSize: 16,
+        color: '#646464',
+        marginBottom: 5,
+    },
+
+    input:{
+        fontFamily: 'PlaypenSans_400Regular',
+        paddingLeft: 20,
+        width: '100%',
+        height: 50,
+        borderRadius: 50,   
+        backgroundColor: 'white',
+        borderWidth: 1,
+        borderColor: '#c8c8c8',
+    },
+
+    inputRadioContainer:{
+        width:'80%',
+        flexDirection: 'row',
+        gap: 30,
+    },
+
+    inputRadio:{
+        fontFamily: 'PlaypenSans_400Regular',
+        fontSize: 16,
     }
+
+
 
 });
 
