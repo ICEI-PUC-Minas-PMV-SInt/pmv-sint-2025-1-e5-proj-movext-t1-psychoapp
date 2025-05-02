@@ -155,6 +155,16 @@ const EstiloGeral = StyleSheet.create({
     inputRadio:{
         fontFamily: 'PlaypenSans_400Regular',
         fontSize: 16,
+    },
+
+    areaTeste:{
+        width: '100%',
+        backgroundColor: '#6ab54d',
+        padding: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 50
+
     }
 
 
