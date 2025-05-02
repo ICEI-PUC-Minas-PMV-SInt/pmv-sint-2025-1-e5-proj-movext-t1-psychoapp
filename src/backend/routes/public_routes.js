@@ -25,6 +25,7 @@ router.post("/cadastro", async (req, res) => {
         cidade: dadosInformados.cidade,
         estado: dadosInformados.estado,
         password: hashPassword,
+        tipoPerfil: dadosInformados.tipoPerfil,
       },
     });
 
@@ -34,14 +35,15 @@ router.post("/cadastro", async (req, res) => {
         message: `Usuário ${novoUsuario.name} Cadastrado com sucesso.`,
         id: novoUsuario.id,
       });
-  } catch (err) {
-    res
-      .status(500)
-      .json({
-        message: `Erro ao cadastrar usuário. O servidor retornou: ${err}`,
+    } catch (err) {
+      // Log detalhado do erro no console
+      console.error("Erro ao cadastrar usuário:", err);
+  
+      res.status(500).json({
+        message: `Erro ao cadastrar usuário. O servidor retornou: ${err.message}`,
       });
-  }
-});
+    }
+  });
 
 router.post(
   "/cadastro-profissional",

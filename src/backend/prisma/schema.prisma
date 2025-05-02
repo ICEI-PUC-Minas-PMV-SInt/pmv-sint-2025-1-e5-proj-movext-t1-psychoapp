@@ -23,6 +23,7 @@ model Usuario {
   cidade         String
   estado         String
   password       String
+  tipoPerfil     String
 
   //Relacionamentos:
 
