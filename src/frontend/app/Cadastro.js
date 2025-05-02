@@ -27,56 +27,64 @@ export default function Cadastro() {
 
   async function handleCadastrar() {
 
-    if (tipoPerfil === '' || nome === '' || cpf === '' || email === '' || telefone === '' || nasc === '' || cidade === '' || estado === '' || senha === '') {
+    if (!/^\d{2}\/\d{2}\/\d{4}$/.test(nasc)) {
+      Alert.alert("Atenção", "Data de nascimento inválida. Use o formato dd/mm/aaaa.");
+      return;
+    }
 
+    if (
+      tipoPerfil === '' || 
+      nome === '' || 
+      cpf === '' || 
+      email === '' || 
+      telefone === '' || 
+      nasc === '' || 
+      cidade === '' || 
+      estado === '' || 
+      senha === ''
+    ) {
       Alert.alert("Atenção", "Preencha todos os campos!");
-
-    } else{
-
-      try{
-
+    } else {
+      try {
+        // Converte a data de nascimento para o formato ISO (aaaa-mm-dd)
+        const [dia, mes, ano] = nasc.split('/'); // Divide a string em partes
+        const dataNascimentoISO = `${ano}-${mes}-${dia}`; // Reorganiza no formato ISO
+  
         const resApi = await api.post('/cadastro', {
           tipoPerfil: tipoPerfil,
           name: nome,
           cpf: cpf,
           email: email,
           telefone: telefone,
-          dataNascimento: nasc,
+          dataNascimento: dataNascimentoISO, // Envia a data no formato correto
           cidade: cidade,
           estado: estado,
           password: senha,
-        })
+        });
   
-       const idUsuario = resApi.data.id;
+        const idUsuario = resApi.data.id;
   
-       await AsyncStorage.setItem('idUsuario', idUsuario);
-
-       Alert.alert("Sucesso!", "Cadastro realizado com sucesso! Por favor faça login para continuar.");
-
-       router.push('/Login');
-
+        await AsyncStorage.setItem('idUsuario', idUsuario);
+  
+        Alert.alert("Sucesso!", "Cadastro realizado com sucesso! Por favor faça login para continuar.");
+  
+        router.push('/Login');
       } catch (e) {
-        // Verifica se há uma resposta do servidor
         if (e.response) {
-          // Exibe o status e a mensagem de erro retornada pelo backend
           Alert.alert(
             "Erro ao cadastrar",
             `Status: ${e.response.status}\nMensagem: ${e.response.data.message}`
           );
           console.error("Erro detalhado:", e.response.data);
         } else if (e.request) {
-          // Caso a requisição tenha sido feita, mas não houve resposta
           Alert.alert("Erro ao cadastrar", "Nenhuma resposta do servidor.");
           console.error("Erro na requisição:", e.request);
         } else {
-          // Caso um erro tenha ocorrido ao configurar a requisição
           Alert.alert("Erro ao cadastrar", "Erro ao configurar a requisição.");
           console.error("Erro desconhecido:", e.message);
         }
       }
-
     }
-
   }
 
   return (
