@@ -5,6 +5,7 @@ import EstiloGeral from './EstiloGeral';
 import Botao from '../components/Botao';
 
 import {useFonts, PlaypenSans_400Regular, PlaypenSans_700Bold} from '@expo-google-fonts/playpen-sans'
+import ListaProfissionais from './ListaProfissionais';
 
 
 export default function App() {

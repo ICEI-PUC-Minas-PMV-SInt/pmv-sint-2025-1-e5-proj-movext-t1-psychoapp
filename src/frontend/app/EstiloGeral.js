@@ -101,9 +101,21 @@ const EstiloGeral = StyleSheet.create({
     },
 
     textoBotao:{
-        fontFamily: 'PlaypenSans_700Bold',
+      fontFamily: 'PlaypenSans_400Regular',
         fontSize: 16,
         color: '#1696de',
+    },
+
+    cardH1:{
+      fontFamily: 'PlaypenSans_700Bold',
+      fontSize:25,
+      color: '#1696de',
+    },
+
+    cardH2:{
+      fontFamily: 'PlaypenSans_700Bold',
+      fontSize:18,
+      color: '#6ab54d',
     },
 
     h2:{
