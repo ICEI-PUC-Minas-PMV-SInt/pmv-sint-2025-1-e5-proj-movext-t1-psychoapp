@@ -5,7 +5,8 @@ import EstiloGeral from './EstiloGeral';
 import Botao from '../components/Botao';
 
 import {useFonts, PlaypenSans_400Regular, PlaypenSans_700Bold} from '@expo-google-fonts/playpen-sans'
-import ListaProfissionais from './ListaProfissionais';
+import CadastroEspecializacaoUsuarioPaciente from './CadastroEspecializacaoUsuarioPaciente';
+
 
 
 export default function App() {
@@ -23,6 +24,7 @@ if (!fontsLoaded) {
 
   return (
 
+   
     <View style={EstiloGeral.body}>
 
       <StatusBar style="auto" />

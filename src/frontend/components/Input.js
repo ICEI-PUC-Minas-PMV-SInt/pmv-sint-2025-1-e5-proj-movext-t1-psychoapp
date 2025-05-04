@@ -1,7 +1,7 @@
 import { View, Text, TextInput } from "react-native";
 import EstiloGeral from "../app/EstiloGeral";
 
-function Input({label, placeholder, onChangeText, secureTextEntry}) {
+function Input({label, placeholder, onChangeText, secureTextEntry, minHeight}) {
     return (
         <View style={EstiloGeral.inputContainer}>
             
@@ -13,6 +13,7 @@ function Input({label, placeholder, onChangeText, secureTextEntry}) {
                 placeholder={placeholder}
                 placeholderTextColor="#999"
                 onChangeText={onChangeText}
+                minHeight={minHeight}
             />
         </View>
     );
