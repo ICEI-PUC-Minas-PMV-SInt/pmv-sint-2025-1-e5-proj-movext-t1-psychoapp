@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, ScrollView, StyleSheet, Alert } from 'react-native';
-import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import EstiloGeral from './EstiloGeral';
 import Header from '../components/Header';
 import SubHeader from '../components/SubHeader';
@@ -13,7 +12,7 @@ import InputArea from '../components/InputArea';
 import api from '../services/api';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function AlterarPerfil() {
+export default function AlterarPerfilPaciente() {
     const router = useRouter();
     const [tipoAtendimento, setTipoAtendimento] = useState('');
     const [nome, setNome] = useState('');
@@ -22,7 +21,10 @@ export default function AlterarPerfil() {
     const [cidade, setCidade] = useState('');
     const [estado, setEstado] = useState('');
     const [senha, setSenha] = useState('');
-    const [trajetoria, setTrajetoria] = useState('');
+    const [diagnostico, setDiagnostico] = useState('');
+    const [queixas, setQueixas] = useState('');
+    const [encaminhamento, setEncaminhamento] = useState('');
+    const [qualDiagnostico, setQualDiagnostico] = useState('');
     
     
 
@@ -51,7 +53,7 @@ export default function AlterarPerfil() {
                 <Input secureTextEntry={true} label={'Senha'} placeholder={'Digite sua Senha'} onChangeText={setSenha} />
 
                 <InputRadio
-                    labelExterna={'Qual o seu tipo de atendimento ?'}
+                    labelExterna={'Qual a necessidade do atendimento ?'}
                     options={[
                         { label: 'Voluntário', value: 'voluntario' },
                         { label: 'Valor Social', value: 'valor social' },
@@ -60,7 +62,29 @@ export default function AlterarPerfil() {
                     onChange={setTipoAtendimento}
 
                 />
-                <InputArea label={'Descreva a sua trajetória profissional'} placeholder={'Digite sua trajetória'} onChangeText={setTrajetoria} />
+                <InputRadio
+                    labelExterna={'Já existe algum diagnóstico ?'}
+                    options={[
+                        { label: 'Sim', value: 'sim' },
+                        { label: 'Não', value: 'nao' },
+                    ]}
+                    checkedValue={diagnostico}
+                    onChange={setDiagnostico}
+/>
+                <InputArea label={'Se sim, qual'} placeholder={''} onChangeText={setQualDiagnostico} />
+
+                <InputRadio
+                    labelExterna={'De onde partiu o encaminhamento ?'}
+                    options={[
+                        { label: 'Escola', value: 'escola' },
+                        { label: 'Médico', value: 'medico' },
+                        { label: 'Psicólogo', value: 'psicologo' },
+                    ]}
+                    checkedValue={encaminhamento}
+                    onChange={setEncaminhamento}
+                    />
+                    <InputArea label={'Descreva as principais queixas'} placeholder={''} onChangeText={setQueixas} />
+
 
             <Text style={EstiloGeral.h2}>Insira sua foto de perfil</Text>
 
