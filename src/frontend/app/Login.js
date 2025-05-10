@@ -31,7 +31,7 @@ export default function Login() {
 
 				Alert.alert("Sucesso!", "Login bem-sucedido! Redirecionando...");
 
-				router.push("/ListaProfissionais"); // Após login bem sucedido, aqui vai direcionar para a página a ser criada de listagem de usuários de acordo com o tipo de perfil.
+				router.push("/ListagemUsuarios"); // Após login bem sucedido, aqui vai direcionar para a página a ser criada de listagem de usuários de acordo com o tipo de perfil.
 			} catch (e) {
 				Alert.alert(
 					"Atenção",
