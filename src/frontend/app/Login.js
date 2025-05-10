@@ -28,6 +28,7 @@ export default function Login() {
 				const token = resApi.data.token;
 
 				await AsyncStorage.setItem("tokenjwt", token);
+				await AsyncStorage.setItem("email", email);
 
 				Alert.alert("Sucesso!", "Login bem-sucedido! Redirecionando...");
 

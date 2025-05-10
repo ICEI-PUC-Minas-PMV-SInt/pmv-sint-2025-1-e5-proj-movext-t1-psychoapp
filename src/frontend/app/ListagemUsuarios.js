@@ -11,46 +11,48 @@ import EstiloGeral from "./EstiloGeral";
 
 export default function ListagemUsuarios() {
     const router = useRouter();
+    const [currentNameUser, setCurrentNameUser] = useState([])
     const [users, setUsers] = useState([]);
-    let nomeUsuario = "";
-    let isPaciente = true;
-    let urlRequest = "";
+    const [currentTipoPerfil, setCurrentTipoPerfil] = useState([])
     let tipoPerfil = "";
-
-    async function getNameAndTypePerfil() {
-        nomeUsuario = "" // recuperar o nome do usuario atual para colocar no header
-        isPaciente = true // recuperar o tipoPerfil do usuario atual para fazer a logica
-    }
 
     async function getUsersList() {
         try {
             const tokenjwt = await AsyncStorage.getItem("tokenjwt");
-            if (isPaciente) {
-                tipoPerfil = "paciente"
-                urlRequest = "/list-profissionais"
+            const [res1, res2] = await Promise.all([
+                api.get("/list-profissionais", {
+                    headers: { Authorization: `Bearer ${tokenjwt}` }
+                }),
+                api.get("/list-pacientes", {
+                    headers: { Authorization: `Bearer ${tokenjwt}` }
+                })
+            ]);
+            const email = await AsyncStorage.getItem("email");
+            if (res1.data.some(item => item.email == email)) {
+                let currentUser = res1.data.find(item => item.email === email)
+                setCurrentNameUser(currentUser.name.split(' ')[0]);
+                tipoPerfil = currentUser.tipoPerfil;
+                setCurrentTipoPerfil(currentUser.tipoPerfil);
+            } else if (res2.data.some(item => item.email == email)) {
+                let currentUser = res2.data.find(item => item.email === email)
+                setCurrentNameUser(currentUser.name.split(' ')[0]);
+                tipoPerfil = currentUser.tipoPerfil;
+                setCurrentTipoPerfil(currentUser.tipoPerfil);
             } else {
-                tipoPerfil = "psicopedagogo"
-                urlRequest = "/list-pacientes"
+                throw new Error("Usuario invalido!");
             }
-            const resApi = await api.get(urlRequest, {
-                headers: {
-                    Authorization: `Bearer ${tokenjwt}`
-                }
-            });
-            setUsers(resApi.data.filter(item => item.tipoPerfil != tipoPerfil));
-            console.log(resApi.data);
-            // console.log(users);
+            let listUsers = res1.data.filter(item => item.tipoPerfil != tipoPerfil)
+            setUsers(listUsers);
         } catch (e) {
             Alert.alert(
                 "Atenção",
-                `Erro ao carregar lista de ${tipoUsuario}, o servidor retornou: ` +
+                `Erro ao carregar lista, o servidor retornou: ` +
                 e.response.data.message
             );
         }
     }
 
     useEffect(() => {
-        getNameAndTypePerfil();
         getUsersList();
     }, []);
 
@@ -66,13 +68,13 @@ export default function ListagemUsuarios() {
     };
 
     function getTopics() {
-        return isPaciente
+        return currentTipoPerfil == "paciente"
             ? ['Modalidade', 'Localização', 'Trajetória profissional']
             : ['Modalidade', 'Localização', 'Possui diagnóstico', 'Encaminhamento', 'Principais queixas'];
     }
 
     function getIcons() {
-        if (isPaciente) {
+        if (currentTipoPerfil == "paciente") {
             return [
                 require('../assets/imgs/icone-modalidade.png'),
                 require('../assets/imgs/icone-localizacao.png'),
@@ -91,7 +93,7 @@ export default function ListagemUsuarios() {
 
 
     function getTextDescription(user) {
-        if (isPaciente) {
+        if (currentTipoPerfil == "paciente") {
             return [
                 `${user.tipoAtendimento}`,
                 `${user.cidade}/${user.estado}`,
@@ -111,7 +113,7 @@ export default function ListagemUsuarios() {
     return (
         <ScrollView>
             <StatusBar style="auto" />
-            <HeaderListagem titulo={`Seja bem vindo ${nomeUsuario}!`} />
+            <HeaderListagem titulo={`Seja bem vindo ${currentNameUser}!`} />
             <SubHeader conteudo={"Com base no seu perfil,\nencontramos os resultados:"} />
             {users.map((user) => (
                 <View key={user.id}>
