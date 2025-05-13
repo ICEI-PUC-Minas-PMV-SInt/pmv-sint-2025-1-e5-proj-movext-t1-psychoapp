@@ -45,6 +45,7 @@ if (!fontsLoaded) {
           <Botao texto="Login" onPress={() => router.push('/Login')}/>
           <Text style={EstiloGeral.h2}>Ainda não tem cadastro?</Text>
           <Botao texto="Cadastrar" onPress={() => router.push('/Cadastro')}/>
+          <Botao texto="Acessar outras páginas" onPress={() => router.push('/rotainvalida')}/>
 
         </View>
 
