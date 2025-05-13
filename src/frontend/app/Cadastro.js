@@ -67,8 +67,8 @@ export default function Cadastro() {
         await AsyncStorage.setItem('idUsuario', idUsuario);
   
         Alert.alert("Sucesso!", "Cadastro realizado com sucesso! Por favor faça login para continuar.");
-  
-        router.push('/Login');
+        {tipoPerfil == "paciente" ? router.push('CadastroEspecializacaoUsuarioPaciente') : router.push('CadastroEspecializacaoUsuarioProfissional')}
+       
       } catch (e) {
         if (e.response) {
           Alert.alert(

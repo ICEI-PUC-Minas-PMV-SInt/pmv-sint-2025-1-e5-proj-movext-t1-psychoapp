@@ -23,8 +23,8 @@ if (!fontsLoaded) {
   }
 
   return (
-
-   
+    
+    
     <View style={EstiloGeral.body}>
 
       <StatusBar style="auto" />
