@@ -36,6 +36,7 @@ export default function CadastroEspecializacaoUsuarioProfissional() {
     
        useEffect(() => {
           getId()
+          router.push("/CadastroEspecializacaoUsuarioProfissional");
        },[])
     
         async function handleCadastrar() {
