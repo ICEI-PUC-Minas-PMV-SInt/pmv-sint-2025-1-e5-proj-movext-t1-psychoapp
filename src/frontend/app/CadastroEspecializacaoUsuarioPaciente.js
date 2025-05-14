@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import { View, Text, ScrollView, StyleSheet, Alert } from "react-native";
+import { View, Text, ScrollView, StyleSheet } from "react-native";
 import { useRouter } from "expo-router";
 import EstiloGeral from "./EstiloGeral";
 import Header from "../components/Header";
@@ -11,6 +11,7 @@ import Input from "../components/Input";
 import api from "../services/api";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import PhotoInput from "../components/PhotoInput";
+import { Alert } from '../components/Alert';
 
 export default function CadastroEspecializacaoUsuarioPaciente() {
   const router = useRouter();
@@ -56,6 +57,7 @@ export default function CadastroEspecializacaoUsuarioPaciente() {
       formData.append("usuarioId", idUsuario);
 
       if (photo) {
+        console.log("photo", photo);
         const uriParts = photo.split(".");
         const fileType = uriParts[uriParts.length - 1];
 
@@ -96,7 +98,7 @@ export default function CadastroEspecializacaoUsuarioPaciente() {
         console.error("Erro na requisição:", e.request);
       } else {
         Alert.alert("Erro ao cadastrar", "Erro ao configurar a requisição.");
-        console.error("Erro desconhecido:", e.message);
+        console.error("Erro desconhecido:", e);
       }
     }
   }

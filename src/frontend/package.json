@@ -19,7 +19,7 @@
     "expo-font": "~13.3.1",
     "expo-image-picker": "~16.1.4",
     "expo-linking": "~7.1.4",
-    "expo-router": "~5.0.6",
+    "expo-router": "~5.0.7",
     "expo-status-bar": "~2.2.3",
     "lorem-ipsum": "^2.0.8",
     "react": "^19.0.0",
