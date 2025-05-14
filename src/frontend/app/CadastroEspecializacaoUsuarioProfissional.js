@@ -16,14 +16,12 @@ export default function CadastroEspecializacaoUsuarioProfissional() {
 
 
     
-       const router = useRouter();
-        const [tipoAtendimento, setTipoAtendimento] = useState("");
-        const [diagnosticoPrevio, setDiagnosticoPrevio] = useState("");
-        const [diagnostico, setDiagnostico] = useState("");
-        const [encaminhamento, setEncaminhamento] = useState("");
-        const [queixas, setQueixas] = useState("");
+      const router = useRouter();
+      const [tipoAtendimento, setTipoAtendimento] = useState("");
+       const [trajetoriaProfissional, setTrajetoriaProfissional] = useState("")
        const [idUsuario, setIdUsuario] = useState('')
        const [googleDriveField, setGoogleDriveField] = useState('');
+        const [photo, setPhoto] = useState(null);
     
        const getId = async () => {
           try {
@@ -35,62 +33,70 @@ export default function CadastroEspecializacaoUsuarioProfissional() {
        };
     
        useEffect(() => {
-          getId()
-          router.push("/CadastroEspecializacaoUsuarioProfissional");
-       },[])
+          getId();
+       },[]);
     
         async function handleCadastrar() {
             if (
                 tipoAtendimento === "" ||
-                diagnosticoPrevio === "" ||
-                encaminhamento === "" ||
-                queixas === "" 
-               
-            ) {
-                Alert.alert("Atenção", "Preencha todos os campos!");
-            } else {
+                trajetoriaProfissional === "" 
+                
+            
+             ) {
+      Alert.alert("Atenção", "Preencha todos os campos!");
+      return;
+    }
                 try {
-                    const resApi = await api.post("/cadastro-profissional", {
-                        necessidadeAtendimento: tipoAtendimento,
-                        diagnostico: diagnostico,
-                        qualDiagnostico: diagnosticoPrevio,
-                        encaminhamento: encaminhamento,
-                        queixas: queixas,
-                        profileimg: googleDriveField,
-                        usuarioId: idUsuario,
-                    });
-    
-                    Alert.alert(
-                        "Sucesso!",
-                        "Segunda etapa finalizada com sucesso."
-                    );
-    
-                    router.push("/Login");
-                } catch (e) {
-                    if (e.response) {
-                        Alert.alert(
-                            "Erro ao cadastrar",
-                            `Status: ${e.response.status}\nMensagem: ${e.response.data.message}`
-                        );
-                        console.error("Erro detalhado:", e.response.data);
-                    } else if (e.request) {
-                        Alert.alert(
-                            "Erro ao cadastrar",
-                            "Nenhuma resposta do servidor."
-                        );
-                        console.error("Erro na requisição:", e.request);
-                    } else {
-                        Alert.alert(
-                            "Erro ao cadastrar",
-                            "Erro ao configurar a requisição."
-                        );
-                        console.error("Erro desconhecido:", e.message);
+                    const formData = new FormData();
+                        formData.append("tipoAtendimento", tipoAtendimento);
+                         formData.append("trajetoriaProfissional", trajetoriaProfissional);
+                         formData.append("usuarioId", idUsuario);
+                
+                    if (photo) {
+                        const uriParts = photo.split(".");
+                        const fileType = uriParts[uriParts.length - 1];
+
+                        formData.append("profileimg", {
+          uri: photo,
+          name: `profile.${fileType}`,
+          type: `image/${fileType}`,
+        });
                     }
-                }
-            }
+                const response = await fetch(
+        "https://app-api-six.vercel.app/cadastro-especializacao-profissional",
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+            // NÃO inclua o Content-Type aqui — o fetch vai incluir com o boundary automaticamente
+          },
         }
-    
-        return (
+      );
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Erro: ${response.status} - ${errorText}`);
+      }
+
+      Alert.alert("Sucesso!", "Segunda etapa finalizada com sucesso.");
+      router.push("/Login");
+    } catch (e) {
+      if (e.response) {
+        Alert.alert(
+          "Erro ao cadastrar",
+          `Status: ${e.response.status}\nMensagem: ${e.response.data.message}`
+        );
+        console.error("Erro detalhado:", e.response.data);
+      } else if (e.request) {
+        Alert.alert("Erro ao cadastrar", "Nenhuma resposta do servidor.");
+        console.error("Erro na requisição:", e.request);
+      } else {
+        Alert.alert("Erro ao cadastrar", "Erro ao configurar a requisição.");
+        console.error("Erro desconhecido:", e.message);
+      }
+    }
+  }
+       return (
             <ScrollView
                 style={styles.scrollView}
                 contentContainerStyle={styles.contentContainer}
@@ -107,10 +113,10 @@ export default function CadastroEspecializacaoUsuarioProfissional() {
     
                 <View style={EstiloGeral.containerInputsGeral}>
                     <InputRadio
-                        labelExterna={"Qual seu tipo de atendimento?"}
+                        labelExterna={'Qual seu tipo de atendimento?'}
                         options={[
-                            { label: "Voluntario", value: "voluntario" },
-                            { label: "Valor Social", value: "valorsocial" },
+                            { label: 'Voluntario', value: 'voluntario' },
+                            { label: 'Valor Social', value: 'valorsocial' },
                         ]}
                         checkedValue={tipoAtendimento}
                         onChange={setTipoAtendimento}
@@ -120,17 +126,18 @@ export default function CadastroEspecializacaoUsuarioProfissional() {
                     <Input
                         label={"Descreva sua trajetória profissional"}
                         placeholder={""}
-                        onChangeText={setQueixas}
-                        minHeight={150}
+                        onChangeText={setTrajetoriaProfissional}
+                        minHeight={100}
                     />
     
                     <PhotoInput
                         texto={"Insira foto de perfil"}
                         corFundo="#1696de"
                         corTexto="white"
-                        onChangeImage={(id) => setGoogleDriveField(id)} // <- supondo que PhotoInput retorna isso 
+                        marginTop={50}
+                       />
 
-                    />
+                    
     
                     <Botao
                         texto={"Avançar"}
@@ -142,7 +149,7 @@ export default function CadastroEspecializacaoUsuarioProfissional() {
                 </View>
             </ScrollView>
         );
-    }
+}
     
     const styles = StyleSheet.create({
         scrollView: {
