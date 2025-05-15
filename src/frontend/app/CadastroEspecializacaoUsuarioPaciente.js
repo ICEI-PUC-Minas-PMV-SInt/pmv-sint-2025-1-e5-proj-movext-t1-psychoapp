@@ -75,7 +75,6 @@ export default function CadastroEspecializacaoUsuarioPaciente() {
           body: formData,
           headers: {
             Accept: "application/json",
-            // NÃO inclua o Content-Type aqui — o fetch vai incluir com o boundary automaticamente
           },
         }
       );
