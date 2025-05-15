@@ -28,26 +28,56 @@ export default function ListagemUsuarios() {
                 })
             ]);
             const email = await AsyncStorage.getItem("email");
+            let listUsers = [];
             if (res1.data.some(item => item.email == email)) {
                 let currentUser = res1.data.find(item => item.email === email)
                 setCurrentNameUser(currentUser.name.split(' ')[0]);
                 tipoPerfil = currentUser.tipoPerfil;
                 setCurrentTipoPerfil(currentUser.tipoPerfil);
+                if (currentUser.paciente != null || currentUser.profissional != null) {
+                    listUsers = res2.data.filter(item => item.paciente != null)
+                } else {
+                    if (currentUser.tipoPerfil == 'paciente') {
+                        listUsers = res1.data.filter(
+                            item => item.tipoPerfil != 'paciente'
+                                && item.profissional != null
+                        )
+                    } else {
+                        listUsers = res2.data.filter(
+                            item => item.tipoPerfil != 'profissional'
+                                && item.paciente != null
+                        )
+                    }
+                }
             } else if (res2.data.some(item => item.email == email)) {
                 let currentUser = res2.data.find(item => item.email === email)
                 setCurrentNameUser(currentUser.name.split(' ')[0]);
                 tipoPerfil = currentUser.tipoPerfil;
                 setCurrentTipoPerfil(currentUser.tipoPerfil);
+                if (currentUser.paciente != null || currentUser.profissional != null) {
+                    listUsers = res1.data.filter(item => item.profissional != null)
+                } else {
+                    if (currentUser.tipoPerfil == 'paciente') {
+                        listUsers = res1.data.filter(
+                            item => item.tipoPerfil != 'paciente'
+                                && item.profissional != null
+                        )
+                    } else {
+                        listUsers = res2.data.filter(
+                            item => item.tipoPerfil != 'profissional'
+                                && item.paciente != null
+                        )
+                    }
+                }
             } else {
-                throw new Error("Usuario invalido!");
+                throw new Error("Usuário não encontrado.");
             }
-            let listUsers = res1.data.filter(item => item.tipoPerfil != tipoPerfil)
             setUsers(listUsers);
         } catch (e) {
             Alert.alert(
                 "Atenção",
                 `Erro ao carregar lista, o servidor retornou: ` +
-                e.response.data.message
+                (e.response?.data?.message || "Usuário não encontrado.")
             );
         }
     }
@@ -70,7 +100,7 @@ export default function ListagemUsuarios() {
     function getTopics() {
         return currentTipoPerfil == "paciente"
             ? ['Modalidade', 'Localização', 'Trajetória profissional']
-            : ['Modalidade', 'Localização', 'Possui diagnóstico', 'Encaminhamento', 'Principais queixas'];
+            : ['Modalidade', 'Localização',/* 'Possui diagnóstico', */'Encaminhamento', 'Principais queixas'];
     }
 
     function getIcons() {
@@ -84,28 +114,37 @@ export default function ListagemUsuarios() {
             return [
                 require('../assets/imgs/icone-modalidade.png'),
                 require('../assets/imgs/icone-localizacao.png'),
-                require('../assets/imgs/icone-diagnostico.png'),
+                //require('../assets/imgs/icone-diagnostico.png'),
                 require('../assets/imgs/icone-encaminhamento.png'),
                 require('../assets/imgs/icone-trajetoria.png')
             ]
         }
     }
 
+    function capitalize(word) {
+        return String(word).charAt(0).toUpperCase() + String(word).slice(1);
+    }
 
     function getTextDescription(user) {
         if (currentTipoPerfil == "paciente") {
             return [
-                `${user.tipoAtendimento}`,
-                `${user.cidade}/${user.estado}`,
-                `${user.trajetoriaProfissional}`
+                `${user.profissional?.tipoAtendimento === 'valorsocial' ? 'Valor social'
+                    : user.profissional?.tipoAtendimento === 'voluntario' ? "Voluntário"
+                        : capitalize(user.profissional?.tipoAtendimento)}`,
+                `${capitalize(user.cidade)}/${user.estado}`,
+                `${capitalize(user.profissional?.trajetoriaProfissional)}`
             ]
         } else {
             return [
-                `${user.necessidadeAtendimento}`,
-                `${user.cidade}/${user.estado}`,
-                `${user.qualDiagnostico}`,
-                `${user.encaminhamento}`,
-                `${user.queixas}`
+                `${user.paciente?.necessidadeAtendimento === 'valorsocial' ? 'Valor social'
+                    : user.paciente?.necessidadeAtendimento === 'voluntario' ? "Voluntário"
+                        : capitalize(user.paciente?.necessidadeAtendimento)}`,
+                `${capitalize(user.cidade)}/${user.estado}`,
+                //`${user.paciente?.qualDiagnostico}`,
+                `${user.paciente?.encaminhamento === 'medico' ? 'Médico'
+                    : user.paciente?.encaminhamento === 'psicologo' ? 'Psicólogo'
+                        : capitalize(user.paciente?.encaminhamento)}`,
+                `${capitalize(user.paciente?.queixas)}`
             ]
         }
     }
@@ -113,12 +152,12 @@ export default function ListagemUsuarios() {
     return (
         <ScrollView>
             <StatusBar style="auto" />
-            <HeaderListagem titulo={`Seja bem vindo ${currentNameUser}!`} />
+            <HeaderListagem titulo={`Seja bem-vindo ${currentNameUser}!`} />
             <SubHeader conteudo={"Com base no seu perfil,\nencontramos os resultados:"} />
             {users.map((user) => (
                 <View key={user.id}>
                     <CardUser
-                        foto={require('../assets/imgs/icone-padrao-usuario.png')}
+                        foto={user.paciente?.profileimg || user.profissional?.profileimg || require('../assets/imgs/icone-padrao-usuario.png')}
                         nome={user.name}
                         idade={calcularIdade(user.dataNascimento)}
                         topicos={getTopics()}
