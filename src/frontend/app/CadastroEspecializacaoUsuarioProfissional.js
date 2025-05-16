@@ -63,7 +63,7 @@ export default function CadastroEspecializacaoUsuarioProfissional() {
         });
                     }
                 const response = await fetch(
-        "https://app-api-six.vercel.app/cadastro-especializacao-profissional",
+        
         {
           method: "POST",
           body: formData,
