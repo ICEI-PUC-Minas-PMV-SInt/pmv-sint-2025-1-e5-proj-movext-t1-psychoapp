@@ -69,13 +69,12 @@ export default function CadastroEspecializacaoUsuarioPaciente() {
       }
 
       const response = await fetch(
-        "https://app-api-six.vercel.app/cadastro-paciente",
+    
         {
           method: "POST",
           body: formData,
           headers: {
             Accept: "application/json",
-            // NÃO inclua o Content-Type aqui — o fetch vai incluir com o boundary automaticamente
           },
         }
       );

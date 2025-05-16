@@ -10,20 +10,22 @@ function CardUser({ foto, nome, idade, topicos, pathIcone, textosDescricao }) {
             <View style={{ alignItems: "center" }}>
                 <View style={EstiloGeral.circleBackgroud}>
                     <Image
-                        source={foto}
+                        source={{ uri: 'https://drive.google.com/uc?export=view&id=' + foto }}
                         style={EstiloGeral.iconUser}
-                        resizeMode="contain"
+                        resizeMode="cover"
                     />
+                </View>
+                <View>
+                    <Text style={EstiloGeral.titleNameCard}>
+                        {nome}
+                    </Text>
+                    <Text style={EstiloGeral.subtitleNameCard}>
+                        {idade}
+                    </Text>
+                    <Spacer spaceHeight={5} />
                 </View>
             </View>
             <View style={EstiloGeral.cardUserContainer}>
-                <Text style={EstiloGeral.titleNameCard}>
-                    {nome}
-                </Text>
-                <Text style={EstiloGeral.subtitleNameCard}>
-                    {idade}
-                </Text>
-                <Spacer spaceHeight={5} />
                 <View style={{ marginLeft: 35 }}>
                     {topicos.map((topico, index) => (
                         <View key={index}>

@@ -29,7 +29,7 @@ export default function Login() {
 
 				await AsyncStorage.setItem("tokenjwt", token);
 				await AsyncStorage.setItem("email", email);
-
+				console.log(token)
 				Alert.alert("Sucesso!", "Login bem-sucedido! Redirecionando...");
 
 				router.push("/ListagemUsuarios"); // Após login bem sucedido, aqui vai direcionar para a página a ser criada de listagem de usuários de acordo com o tipo de perfil.
@@ -42,7 +42,6 @@ export default function Login() {
 			}
 		}
 	}
-
 	return (
 		<View style={EstiloGeral.body}>
 			<StatusBar style="auto" />

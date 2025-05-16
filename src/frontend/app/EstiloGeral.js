@@ -199,11 +199,12 @@ const EstiloGeral = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 3,
+        overflow: 'hidden'
     },
 
-    iconUser:{
-        width: 100,
-        height: 100
+    iconUser: {
+        width: '100%',
+        height: '100%'
     },
 
     cardUserContainer: {
@@ -235,6 +236,7 @@ const EstiloGeral = StyleSheet.create({
 
     textDescription:{
         marginLeft: 10,
+        marginRight: 20,
         fontFamily: 'PlaypenSans_400Regular',
         fontSize: 17
     }
