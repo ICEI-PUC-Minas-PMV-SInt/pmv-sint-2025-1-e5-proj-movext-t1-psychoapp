@@ -187,7 +187,7 @@ export default function AlterarPerfilPaciente() {
             setIsLoading(true);
 
             // Verificar se os campos obrigatórios foram preenchidos
-            if (!nome || !telefone || !cidade || !estado ) {
+            if (!nome || !telefone || !cidade || !estado) {
                 console.log('Campos obrigatórios não preenchidos');
                 Alert.alert('Erro', 'Preencha todos os campos obrigatórios');
                 setIsLoading(false);
@@ -343,13 +343,6 @@ export default function AlterarPerfilPaciente() {
                     defaultValue={estado}
                     onChangeText={setEstado}
                 />
-                <Input
-                    secureTextEntry={true}
-                    defaultValue={'Senha'}
-                    placeholder={'Digite sua nova senha (deixe em branco para manter a atual)'}
-                    onChangeText={setSenha}
-                />
-
                 <InputRadio
                     labelExterna={'Qual a necessidade do atendimento ?'}
                     options={[

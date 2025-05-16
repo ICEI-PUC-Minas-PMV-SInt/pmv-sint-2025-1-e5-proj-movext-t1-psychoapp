@@ -30,7 +30,7 @@ export default function AlterarPerfilProfissional() {
     const [profileImage, setProfileImage] = useState(null);
     const [idUsuario, setIdUsuario] = useState(null);
     const [imageUri, setImageUri] = useState(null);
-      const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
 
 
@@ -317,7 +317,6 @@ export default function AlterarPerfilProfissional() {
                 <Input label={'Data de Nascimento'} placeholder={'xx/xx/xxxx'} onChangeText={setNasc} />
                 <Input label={'Cidade'} placeholder={'Digite sua Cidade'} onChangeText={setCidade} />
                 <Input label={'Estado'} placeholder={'Digite seu Estado'} onChangeText={setEstado} />
-                <Input secureTextEntry={true} label={'Senha'} placeholder={'Digite sua Senha'} onChangeText={setSenha} />
 
                 <InputRadio
                     labelExterna={'Qual o seu tipo de atendimento ?'}
