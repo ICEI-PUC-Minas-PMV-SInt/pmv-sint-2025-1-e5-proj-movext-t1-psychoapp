@@ -39,6 +39,7 @@ export default function Login() {
         await AsyncStorage.setItem('tokenjwt', token);
         await AsyncStorage.setItem('tipoPerfil', tipoPerfil);
         await AsyncStorage.setItem('id', id);
+        await AsyncStorage.setItem('email', email);
         await AsyncStorage.setItem('name', name);
 
         Alert.alert("Sucesso!", "Login bem-sucedido! Redirecionando...");
