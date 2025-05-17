@@ -97,7 +97,7 @@ const EstiloGeral = StyleSheet.create({
     botao:{
         marginTop: 10,
         backgroundColor: 'white',
-        width: 200,
+        width: 300,
         height: 40,
         borderRadius: 50,
         alignItems: 'center',
