@@ -1,7 +1,7 @@
 import { View, Text, TextInput } from "react-native";
 import EstiloGeral from "../app/EstiloGeral";
 
-function InputArea({label, placeholder, onChangeText, secureTextEntry}) {
+function InputArea({label, placeholder, onChangeText, secureTextEntry, defaultValue}) {
     return (
         <View style={EstiloGeral.inputContainer}>
             
@@ -14,6 +14,7 @@ function InputArea({label, placeholder, onChangeText, secureTextEntry}) {
                 placeholderTextColor="#999"
                 onChangeText={onChangeText}
                 multiline
+                defaultValue={defaultValue}
             />
         </View>
     );

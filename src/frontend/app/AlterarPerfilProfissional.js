@@ -32,14 +32,10 @@ export default function AlterarPerfilProfissional() {
     const [imageUri, setImageUri] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
-
-
-    // Função para carregar os dados do usuário ao abrir a tela
     const carregarDadosUsuario = async () => {
         try {
-            // Recuperar o token JWT e o ID do usuário do AsyncStorage
             const token = await AsyncStorage.getItem('tokenjwt');
-            const userId = await AsyncStorage.getItem('idUsuario');
+            const email = await AsyncStorage.getItem('email');
 
             if (!token || !userId) {
                 Alert.alert('Erro', 'Você precisa estar logado para acessar esta funcionalidade');
@@ -47,17 +43,14 @@ export default function AlterarPerfilProfissional() {
                 return;
             }
 
-            setIdUsuario(userId);
+            setEmail(email);
 
-            // Configurar o cabeçalho da requisição com o token
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
-            // Buscar os dados do usuário
             const response = await api.get(`/list-pacientes`);
             console.log('Dados do usuário:', response.data);
 
-            // Encontrar o usuário atual na lista de pacientes
-            const usuarioAtual = response.data.find(user => user.id === userId);
+            const usuarioAtual = response.data.find(user => user.email === email);
             console.log('Usuário atual:', usuarioAtual);
 
             if (!usuarioAtual) {
@@ -65,11 +58,9 @@ export default function AlterarPerfilProfissional() {
                 return;
             }
 
-            // Preencher os campos do formulário com os dados existentes
             setNome(usuarioAtual.name || '');
             setTelefone(usuarioAtual.telefone || '');
 
-            // Formatar a data de nascimento para o formato DD/MM/AAAA
             if (usuarioAtual.dataNascimento) {
                 const data = new Date(usuarioAtual.dataNascimento);
                 const dia = String(data.getDate()).padStart(2, '0');
@@ -77,19 +68,18 @@ export default function AlterarPerfilProfissional() {
                 const ano = data.getFullYear();
                 setNasc(`${dia}/${mes}/${ano}`);
             }
-
+            setIdUsuario(usuarioAtual.id || '');
             setCidade(usuarioAtual.cidade || '');
             setEstado(usuarioAtual.estado || '');
             setCpf(usuarioAtual.cpf || '');
             setEmail(usuarioAtual.email || '');
 
-            if (usuarioAtual.paciente) {
+            if (usuarioAtual.profissional) {
                 setTipoAtendimento(usuarioAtual.profissional.tipoAtendimento || '');
                 setTrajetoriaProfissional(usuarioAtual.profissional.trajetoriaProfissional || '');
-                setProfileImg(usuarioAtual.paciente.profileimg || null);
+                setProfileImg(usuarioAtual.profissional.profileimg || null);
 
-                // Se houver imagem de perfil, exibir a imagem
-                if (usuarioAtual.paciente.profileimg) {
+                if (usuarioAtual.profissional.profileimg) {
                     setProfileImage(`https://drive.google.com/file/d/${usuarioAtual.profissional.profileimg}`);
                 }
             }
@@ -104,7 +94,6 @@ export default function AlterarPerfilProfissional() {
         carregarDadosUsuario();
     }, []);
 
-    // Função para selecionar imagem da galeria
     const selecionarImagem = async () => {
         try {
             const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
@@ -130,15 +119,12 @@ export default function AlterarPerfilProfissional() {
         }
     };
 
-    // Função para preparar os dados do formulário para envio
     const prepararFormData = () => {
         const formData = new FormData();
 
-        // Adicionar os dados do usuário
         formData.append('name', nome);
         formData.append('telefone', telefone);
 
-        // Converter a data do formato DD/MM/AAAA para YYYY-MM-DD
         if (nasc) {
             const [dia, mes, ano] = nasc.split('/');
             const dataNascimentoISO = `${ano}-${mes}-${dia}`; // Reorganiza no formato ISO
@@ -153,14 +139,12 @@ export default function AlterarPerfilProfissional() {
             formData.append('password', senha);
         }
 
-        // Adicionar os dados do paciente
         formData.append('tipoAtendimento', tipoAtendimento);
         formData.append('trajetoriaProfissional', trajetoriaProfissional);
         formData.append('profileimg', profileimg);
         formData.append('email', email);
         formData.append('cpf', cpf);
 
-        // Adicionar a imagem de perfil, se houver
         if (imageUri) {
             const filename = imageUri.split('/').pop();
             const match = /\.(\w+)$/.exec(filename);
@@ -176,14 +160,12 @@ export default function AlterarPerfilProfissional() {
         return formData;
     };
 
-    // Função para salvar as alterações
     const salvarAlteracoes = async () => {
         try {
             console.log('Salvando alterações...');
             setIsLoading(true);
 
-            // Verificar se os campos obrigatórios foram preenchidos
-            if (!nome || !telefone || !cidade || !estado) {
+            if (!nome || !telefone || !cidade || !estado || !tipoAtendimento || !trajetoriaProfissional) {
                 console.log('Campos obrigatórios não preenchidos');
                 Alert.alert('Erro', 'Preencha todos os campos obrigatórios');
                 setIsLoading(false);
@@ -192,14 +174,12 @@ export default function AlterarPerfilProfissional() {
 
             console.log('Campos obrigatórios preenchidos com sucesso!');
 
-            // Verificar se a data está no formato correto
             if (nasc && !/^\d{2}\/\d{2}\/\d{4}$/.test(nasc)) {
                 Alert.alert('Erro', 'A data de nascimento deve estar no formato DD/MM/AAAA');
                 setIsLoading(false);
                 return;
             }
 
-            // Recuperar o token JWT
             const token = await AsyncStorage.getItem('tokenjwt');
 
             if (!token) {
@@ -209,20 +189,17 @@ export default function AlterarPerfilProfissional() {
                 return;
             }
 
-            // Configurar o cabeçalho da requisição
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
             api.defaults.headers.common['Content-Type'] = 'multipart/form-data';
 
-            // Preparar os dados do formulário
             const formData = prepararFormData();
             console.log('Dados do formulário:', formData);
 
-            // Enviar a requisição para o servidor
             const response = await api.put(`/usuario-paciente/${idUsuario}`, formData);
 
             if (response.status === 200) {
                 Alert.alert('Sucesso', 'Perfil atualizado com sucesso', [
-                    { text: 'OK', onPress: () => router.back() }
+                    { text: 'OK', onPress: () => router.push('/ListagemUsuarios') }
                 ]);
             }
         } catch (error) {
@@ -239,7 +216,6 @@ export default function AlterarPerfilProfissional() {
         }
     };
 
-    // Função para excluir o perfil
     const excluirPerfil = async () => {
         try {
             Alert.alert(
@@ -253,7 +229,6 @@ export default function AlterarPerfilProfissional() {
                         onPress: async () => {
                             setIsLoading(true);
 
-                            // Recuperar o token JWT
                             const token = await AsyncStorage.getItem('tokenjwt');
 
                             if (!token) {
@@ -263,19 +238,16 @@ export default function AlterarPerfilProfissional() {
                                 return;
                             }
 
-                            // Configurar o cabeçalho da requisição
                             api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
-                            // Enviar a requisição para o servidor
                             const response = await api.delete(`/usuario-delete/${idUsuario}`);
 
                             if (response.status === 200) {
-                                // Limpar os dados de autenticação
                                 await AsyncStorage.removeItem('tokenjwt');
                                 await AsyncStorage.removeItem('idUsuario');
 
                                 Alert.alert('Sucesso', 'Perfil excluído com sucesso', [
-                                    { text: 'OK', onPress: () => router.push('/') }
+                                    { text: 'OK', onPress: () => router.push('/Login') }
                                 ]);
                             }
                         }
@@ -331,15 +303,13 @@ export default function AlterarPerfilProfissional() {
                 <InputArea label={'Descreva a sua trajetória profissional'} placeholder={'Digite sua trajetória'} onChangeText={setTrajetoriaProfissional} />
 
                 <Text style={EstiloGeral.h2}>Insira sua foto de perfil</Text>
-                {/* Exibir imagem de perfil atual ou a selecionada */}
-                {(profileImage || imageUri) && (
-                    <View style={styles.imageContainer}>
-                        <Image
-                            source={{ uri: imageUri || profileImage }}
-                            style={styles.profileImage}
-                        />
-                    </View>
-                )}
+                 <View style={EstiloGeral.circleBackgroud}>
+                    <Image
+                        source={{ uri: 'https://drive.google.com/uc?export=view&id=' + profileImage }}
+                        style={EstiloGeral.iconUser}
+                        resizeMode="cover"
+                    />   
+                </View>
 
 
                 <Botao
