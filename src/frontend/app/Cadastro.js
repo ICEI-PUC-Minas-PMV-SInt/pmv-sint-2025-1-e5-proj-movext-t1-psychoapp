@@ -66,9 +66,17 @@ export default function Cadastro() {
   
         await AsyncStorage.setItem('idUsuario', idUsuario);
   
+<<<<<<< HEAD
         Alert.alert("Sucesso!", "Cadastro realizado com sucesso! Por favor faça login para continuar.");
         {tipoPerfil == "paciente" ? router.push('CadastroEspecializacaoUsuarioPaciente') : router.push('CadastroEspecializacaoUsuarioProfissional')}
        
+=======
+        Alert.alert("1ª Etapa concluída!", `Por favor conclua seu perfil como ${tipoPerfil}.`);
+  
+        router.push(tipoPerfil == 'paciente' ? '/CadastroPaciente' : '/CadastroProfissional');
+
+
+>>>>>>> temp-branch
       } catch (e) {
         if (e.response) {
           Alert.alert(
@@ -133,7 +141,7 @@ export default function Cadastro() {
 
         {/* ÁREA DE TESTES: */}
 
-        <View style={EstiloGeral.areaTeste}>
+        {/* <View style={EstiloGeral.areaTeste}>
 
           <Text style={{color:'white', fontFamily:'PlaypenSans_700Bold', fontSize: 16}}>ÁREA DE TESTES DO BD LOCAL:</Text>
 
@@ -151,11 +159,21 @@ export default function Cadastro() {
             });
           }} corFundo='#1696de' corTexto='white' marginTop={20}/>
 
-          {/* ÁREA DE TESTES: */}
 
-        </View>
+          <Botao texto={'TIPO PERFIL'} onPress={() => {
+            AsyncStorage.getItem('tipoPerfil').then((value) => {
+              Alert.alert("Tipo de Perfil:", value);
+            });
+          }} corFundo='#1696de' corTexto='white' marginTop={20}/>
+
+        </View> */}
+
+       {/* ÁREA DE TESTES: */}
 
       </View>
+
+  <View style={{height: 50}}></View>
+
     </ScrollView>
   );
 }

@@ -62,6 +62,7 @@ export default function Login() {
 					onChangeText={(e) => setSenha(e)}
 				/>
 
+<<<<<<< HEAD
 				<Botao
 					marginTop={20}
 					texto={"Entrar"}
@@ -84,3 +85,55 @@ export default function Login() {
 		</View>
 	);
 }
+=======
+        const token = resApi.data.token;
+        const tipoPerfil = resApi.data.tipoPerfil;
+        const id = resApi.data.id;
+        const name = resApi.data.name;
+        
+
+        await AsyncStorage.setItem('tokenjwt', token);
+        await AsyncStorage.setItem('tipoPerfil', tipoPerfil);
+        await AsyncStorage.setItem('id', id);
+        await AsyncStorage.setItem('name', name);
+
+        Alert.alert("Sucesso!", "Login bem-sucedido! Redirecionando...");
+
+        router.push('/Listar');
+
+
+      }catch (e) {
+        Alert.alert("Atenção", "Erro ao fazer login, o servidor retornou: " + e.response.data.message);
+        }
+      }
+    
+  }
+
+  return (
+
+    <View style={EstiloGeral.body}>
+
+      <StatusBar style="auto" />
+      
+      <Header titulo={'Login'} imageSourceProp={true}/>
+      <SubHeader conteudo={'Preencha as informações para fazer login'}/>
+
+      <View style={EstiloGeral.containerInputsGeral}>
+
+        <Input label={'E-mail'} placeholder={'Digite seu e-mail'} onChangeText={(e) => setEmail(e)}/>
+        <Input secureTextEntry={true} label={'Senha'} placeholder={'Digite sua senha'} onChangeText={(e) => setSenha(e)}/>
+
+        <Botao marginTop={20} texto={'Entrar'} corFundo='#1696de' corTexto='white' onPress={() => {handleLogin()}}/>
+
+        <Text style={EstiloGeral.h2}>Não tem cadastro?</Text>
+
+        <Botao texto={'Cadastre-se'} onPress={() => {router.push('/Cadastro')}}/>
+
+      </View>
+
+
+    </View>
+
+  );
+}
+>>>>>>> temp-branch
