@@ -48,6 +48,7 @@ const EstiloGeral = StyleSheet.create({
         fontFamily: 'PlaypenSans_700Bold',
         fontSize: 20,
         color: 'white',
+        textAlign: 'center',
     },
 
     linkGoBack:{
@@ -175,7 +176,131 @@ const EstiloGeral = StyleSheet.create({
         alignItems: 'center',
         marginTop: 50
 
+    },
+
+        textoCarregamento:{
+        fontFamily: 'PlaypenSans_700Bold',
+        fontSize: 16,
+        color: '#1696de',
+        marginTop: 15,
+    },
+
+    //LISTAGEM:
+
+    listaContainer:{
+        width: '75%',
+        height: '100%',
+    },
+
+    itemNome:{
+        fontFamily: 'PlaypenSans_700Bold',
+        textAlign: 'center',
+        fontSize: 26, // Ajustado
+        color: '#1696de',
+        marginBottom: 2, // Reduzido
+    },
+
+    itemIdade: { // Novo estilo para a idade
+        fontFamily: 'PlaypenSans_700Bold',
+        textAlign: 'center',
+        fontSize: 22,
+        color: '#1696de',
+        marginBottom: 8,
+    },
+
+    itemDetalhe: { // Novo estilo para os outros detalhes do item
+        fontFamily: 'PlaypenSans_400Regular',
+        fontSize: 14,
+        color: '#333', // Escurecido um pouco
+        marginBottom: 4, // Aumentado um pouco
+        textAlign: 'left', 
+    },
+
+    itemImagemLista: { 
+        width: 90, // Aumentado
+        height: 90, // Aumentado
+        borderRadius: 45, // Metade da largura/altura para ser circular
+        marginBottom: 12, // Aumentado
+        alignSelf: 'center', 
+        backgroundColor: '#e0e0e0', 
+        borderWidth: 2, // Adicionada borda
+        borderColor: '#1696de', // Cor da borda
+    },
+
+    itemLista: { 
+        backgroundColor: '#fff',
+        padding: 15,
+        borderRadius: 10,
+        marginBottom: 15,
+        borderWidth: 1,
+        borderColor: '#e0e0e0', 
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.08, 
+        shadowRadius: 4,
+        elevation: 3,
+        width: '100%', 
+    },
+
+    listaContainer: { 
+        width: '90%', 
+        marginTop: 20,
+        alignSelf: 'center',
+    },
+
+    tituloSeçãoLista: { // Novo estilo para o título da seção (ex: "Pacientes Disponíveis:")
+        fontSize: 18,
+        fontFamily: 'PlaypenSans_600SemiBold',
+        marginBottom: 15,
+        color: '#333',
+        textAlign: 'center',
+    },
+
+    textoListaVazia: { // Novo estilo para texto de lista vazia
+        marginTop: 30,
+        fontSize: 16,
+        fontFamily: 'PlaypenSans_400Regular',
+        color: '#666',
+        textAlign: 'center',
+    },
+
+    imgPerfil:{
+        width: 200,
+        height: 200,
+        borderRadius: 300,
+        alignSelf: 'center',
+        marginBottom: 10,
+    },
+
+    itemLista:{
+        alignItems: 'center',
+    },
+
+    dadosItemLista:{
+        width: '80%',
+    },
+
+    tituloDadoLista:{
+        fontFamily: 'PlaypenSans_700Bold',
+        fontSize: 18,
+        color: '#6ab54d',
+        marginBottom: 2,
+    },
+
+    conteudoDadoLista:{
+        fontFamily: 'PlaypenSans_400Regular',
+        fontSize: 16,
+        color: '#646464',
+    },
+
+    containerIconeLista:{
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 10,
     }
+
+
+
 
 
 

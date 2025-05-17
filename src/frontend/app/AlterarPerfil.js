@@ -288,11 +288,11 @@ export default function AlterarPerfil() {
           numberOfLines={4} // Ajuste conforme necessário
         />
 
-        <PhotoInput
+        {/* <PhotoInput
           label="Foto de Perfil"
           onImageSelected={(uri) => setPhotoUriPaciente(uri)}
           initialImageUri={photoUriPaciente}
-        />
+        /> */}
         </>
       ):(
         <>
@@ -308,11 +308,11 @@ export default function AlterarPerfil() {
 
         <Input label={'Descreva sua trajetória profissional'} placeholder={'Digite aqui'} onChangeText={setTrajetoriaProfissional} multiline={true} />
 
-        <PhotoInput
+        {/* <PhotoInput
           label="Foto de Perfil"
           onImageSelected={(uri) => setPhotoUriProfissional(uri)}
           initialImageUri={photoUriProfissional}
-        />
+        /> */}
         </>
       )}
       

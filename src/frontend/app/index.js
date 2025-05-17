@@ -43,9 +43,9 @@ if (!fontsLoaded) {
           <Botao texto="Login" onPress={() => router.push('/Login')}/>
           <Text style={EstiloGeral.h2}>Ainda não tem cadastro?</Text>
           <Botao texto="Cadastrar" onPress={() => router.push('/Cadastro')}/>
-          <Botao texto="Menu" onPress={() => router.push('/Menu')}/>
 
-          <Botao texto="Limpar BD local" onPress={async () => await AsyncStorage.clear()} marginTop={50} corFundo='#1696de' corTexto='white'/>
+          {/* <Botao texto="Menu" onPress={() => router.push('/Listar')}/>
+          <Botao texto="Limpar BD local" onPress={async () => await AsyncStorage.clear()} marginTop={50} corFundo='#1696de' corTexto='white'/> */}
 
         </View>
 

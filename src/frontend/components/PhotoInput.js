@@ -48,8 +48,8 @@ function PhotoInput({ label, onImageSelected, initialImageUri }) {
                     <Image source={{ uri: imageUri }} style={styles.imagePreview} />
                 ) : (
                     <View style={styles.placeholder}>
-                        <FontAwesome name="camera" size={30} color="#888" />
-                        <Text style={styles.placeholderText}>Selecionar Imagem</Text>
+                        <Image source={require('../assets/imgs/img-placeholder.png')} style={{ width: 60, height: 55 }} />
+                        <Text style={styles.placeholderText}>Buscar Imagem</Text>
                     </View>
                 )}
             </TouchableOpacity>
@@ -67,19 +67,20 @@ const styles = StyleSheet.create({
         marginBottom: 8,
         alignSelf: 'flex-start',
         fontSize: 16,
-        color: '#333',
-        // marginLeft: '5%', // Removido para centralizar o label com o container
+        color: '#646464',
+        paddingLeft: 20,
     },
     imagePicker: {
-        width: 150,
-        height: 150,
-        borderRadius: 75,
-        backgroundColor: '#e9e9e9',
+        width: 170,
+        height: 170,
+        borderRadius: 100,
+        backgroundColor: 'white',
         justifyContent: 'center',
         alignItems: 'center',
-        borderWidth: 1,
-        borderColor: '#ccc',
         overflow: 'hidden',
+        backgroundColor: 'white',
+        borderWidth: 1,
+        borderColor: '#c8c8c8',
     },
     imagePreview: {
         width: '100%',
@@ -90,6 +91,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     placeholderText: {
+        fontFamily: 'PlaypenSans_400Regular',
         marginTop: 10,
         color: '#555',
         fontSize: 14,

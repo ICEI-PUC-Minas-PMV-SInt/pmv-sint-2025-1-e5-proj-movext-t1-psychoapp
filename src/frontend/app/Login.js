@@ -33,15 +33,17 @@ export default function Login() {
         const token = resApi.data.token;
         const tipoPerfil = resApi.data.tipoPerfil;
         const id = resApi.data.id;
+        const name = resApi.data.name;
         
 
         await AsyncStorage.setItem('tokenjwt', token);
         await AsyncStorage.setItem('tipoPerfil', tipoPerfil);
         await AsyncStorage.setItem('id', id);
+        await AsyncStorage.setItem('name', name);
 
         Alert.alert("Sucesso!", "Login bem-sucedido! Redirecionando...");
 
-        router.push('/Menu');
+        router.push('/Listar');
 
 
       }catch (e) {
