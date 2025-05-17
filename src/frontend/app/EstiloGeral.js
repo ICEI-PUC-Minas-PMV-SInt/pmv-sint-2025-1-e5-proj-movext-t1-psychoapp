@@ -46,7 +46,7 @@ const EstiloGeral = StyleSheet.create({
 
     tituloHeader:{
         fontFamily: 'PlaypenSans_700Bold',
-        fontSize: 25,
+        fontSize: 20,
         color: 'white',
     },
 
@@ -80,7 +80,7 @@ const EstiloGeral = StyleSheet.create({
         fontFamily: 'PlaypenSans_400Regular',
         fontSize: 16,
         color: 'white',
-        width: '200',
+        width: '220',
     },
 
     botao:{

@@ -43,6 +43,8 @@ if (!fontsLoaded) {
           <Text style={EstiloGeral.h2}>Ainda não tem cadastro?</Text>
           <Botao texto="Cadastrar" onPress={() => router.push('/Cadastro')}/>
 
+          <Botao texto="PACIENTE" onPress={() => router.push('/CadastroPaciente')}/>
+
         </View>
 
       </View>
