@@ -66,17 +66,11 @@ export default function Cadastro() {
   
         await AsyncStorage.setItem('idUsuario', idUsuario);
   
-<<<<<<< HEAD
-        Alert.alert("Sucesso!", "Cadastro realizado com sucesso! Por favor faça login para continuar.");
-        {tipoPerfil == "paciente" ? router.push('CadastroEspecializacaoUsuarioPaciente') : router.push('CadastroEspecializacaoUsuarioProfissional')}
-       
-=======
         Alert.alert("1ª Etapa concluída!", `Por favor conclua seu perfil como ${tipoPerfil}.`);
   
         router.push(tipoPerfil == 'paciente' ? '/CadastroPaciente' : '/CadastroProfissional');
 
 
->>>>>>> temp-branch
       } catch (e) {
         if (e.response) {
           Alert.alert(

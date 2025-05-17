@@ -112,21 +112,9 @@ const EstiloGeral = StyleSheet.create({
     },
 
     textoBotao:{
-      fontFamily: 'PlaypenSans_400Regular',
+        fontFamily: 'PlaypenSans_700Bold',
         fontSize: 16,
         color: '#1696de',
-    },
-
-    cardH1:{
-      fontFamily: 'PlaypenSans_700Bold',
-      fontSize:25,
-      color: '#1696de',
-    },
-
-    cardH2:{
-      fontFamily: 'PlaypenSans_700Bold',
-      fontSize:18,
-      color: '#6ab54d',
     },
 
     h2:{
@@ -189,8 +177,6 @@ const EstiloGeral = StyleSheet.create({
         marginTop: 50
 
     },
-<<<<<<< HEAD
-=======
 
         textoCarregamento:{
         fontFamily: 'PlaypenSans_700Bold',
@@ -311,69 +297,7 @@ const EstiloGeral = StyleSheet.create({
         alignItems: 'center',
         gap: 10,
     }
->>>>>>> temp-branch
 
-    textIconButton:{
-        fontFamily: 'PlaypenSans_700Bold',
-        fontSize: 18,
-        color: '#FFFFFF',
-    },
-
-    circleBackgroud:{
-        width: 150,
-        height: 150,
-        borderRadius: 75,
-        backgroundColor: 'white',
-        justifyContent: 'center',
-        alignItems: 'center',
-        // sombra para Android
-        elevation: 4,
-        // sombra para iOS
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2,
-        shadowRadius: 3,
-        overflow: 'hidden'
-    },
-
-    iconUser: {
-        width: '100%',
-        height: '100%'
-    },
-
-    cardUserContainer: {
-        marginLeft: 50,
-        marginRight: 50,
-        alignItems: "flex-start",
-        flexGrow: 1,
-    },
-
-    titleNameCard:{
-        fontFamily: 'PlaypenSans_700Bold',
-        fontSize:22,
-        color: '#1696de',
-        alignContent: "center",
-    },
-
-    subtitleNameCard:{
-        fontFamily: 'PlaypenSans_700Bold',
-        fontSize:22,
-        color: '#1696de',
-        alignContent: "center",
-        lineHeight: 28,
-    },
-    
-    iconTopics:{
-        width: 30,
-        height: 30
-    },
-
-    textDescription:{
-        marginLeft: 10,
-        marginRight: 20,
-        fontFamily: 'PlaypenSans_400Regular',
-        fontSize: 17
-    }
 
 
 

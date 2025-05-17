@@ -1,9 +1,6 @@
 import { View, Text, TextInput, StyleSheet } from "react-native";
 import EstiloGeral from "../app/EstiloGeral";
 
-<<<<<<< HEAD
-function Input({label, placeholder, onChangeText, secureTextEntry, minHeight, defaultValue}) {
-=======
 function Input({label, placeholder, onChangeText, secureTextEntry, multiline, numberOfLines, value}) { // Adicionada a prop value
     
     // Estilo base do input, vindo do EstiloGeral
@@ -14,7 +11,6 @@ function Input({label, placeholder, onChangeText, secureTextEntry, multiline, nu
         inputStyle.push(styles.textAreaStyle);
     }
     
->>>>>>> temp-branch
     return (
         <View style={EstiloGeral.inputContainer}>
             
@@ -26,16 +22,11 @@ function Input({label, placeholder, onChangeText, secureTextEntry, multiline, nu
                 placeholder={placeholder}
                 placeholderTextColor="#999"
                 onChangeText={onChangeText}
-<<<<<<< HEAD
-                minHeight={minHeight}
-                defaultValue={defaultValue}
-=======
                 value={value} // Adicionado para controle do valor
                 multiline={multiline}
                 numberOfLines={numberOfLines} // Sugestão de número de linhas para Android
                 // textAlignVertical é útil para multiline no Android
                 textAlignVertical={multiline ? 'top' : 'auto'} 
->>>>>>> temp-branch
             />
         </View>
     );
