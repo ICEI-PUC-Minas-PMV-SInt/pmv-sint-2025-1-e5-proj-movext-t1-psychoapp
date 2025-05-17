@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import EstiloGeral from './EstiloGeral';
 import Header from '../components/Header';
 import SubHeader from '../components/SubHeader';
@@ -9,7 +9,6 @@ import InputRadio from '../components/InputRadio';
 import Botao from '../components/Botao';
 import Input from '../components/Input';
 import InputArea from '../components/InputArea';
-import * as ImagePicker from 'expo-image-picker';
 import api from '../services/api';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert } from '../components/Alert';
@@ -31,8 +30,6 @@ export default function AlterarPerfilPaciente() {
     const [qualDiagnostico, setQualDiagnostico] = useState('');
     const [idUsuario, setIdUsuario] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-    const [profileImage, setProfileImage] = useState(null);
-    const [imageUri, setImageUri] = useState(null);
 
     const carregarDadosUsuario = async () => {
         try {
@@ -85,9 +82,6 @@ export default function AlterarPerfilPaciente() {
             setQualDiagnostico(usuarioAtual.paciente.qualDiagnostico || '');
             setEncaminhamento(usuarioAtual.paciente.encaminhamento || '');
             setQueixas(usuarioAtual.paciente.queixas || '');
-            setProfileImage(usuarioAtual.paciente.profileimg);
-            console.log('profileImage: '+ profileImage);
-            console.log('imageUri: '+ imageUri);
         } catch (error) {
             console.error('Erro ao carregar dados do usuário:', error);
             Alert.alert('Erro', 'Não foi possível carregar os dados do usuário');
@@ -97,31 +91,6 @@ export default function AlterarPerfilPaciente() {
     useEffect(() => {
         carregarDadosUsuario();
     }, []);
-
-    const selecionarImagem = async () => {
-        try {
-            const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-
-            if (status !== 'granted') {
-                Alert.alert('Permissão negada', 'Precisamos da permissão para acessar suas fotos');
-                return;
-            }
-
-            const result = await ImagePicker.launchImageLibraryAsync({
-                mediaTypes: ImagePicker.MediaTypeOptions.Images,
-                allowsEditing: true,
-                aspect: [1, 1],
-                quality: 0.8,
-            });
-
-            if (!result.canceled && result.assets && result.assets.length > 0) {
-                setImageUri(result.assets[0].uri);
-            }
-        } catch (error) {
-            console.error('Erro ao selecionar imagem:', error);
-            Alert.alert('Erro', 'Não foi possível selecionar a imagem');
-        }
-    };
 
     const prepararFormData = () => {
         const formData = new FormData();
@@ -150,18 +119,6 @@ export default function AlterarPerfilPaciente() {
         formData.append('queixas', queixas);
         formData.append('email', email);
         formData.append('cpf', cpf);
-
-        if (imageUri) {
-            const filename = imageUri.split('/').pop();
-            const match = /\.(\w+)$/.exec(filename);
-            const type = match ? `image/${match[1]}` : 'image/jpeg';
-
-            formData.append('profileimg', {
-                uri: imageUri,
-                name: filename,
-                type,
-            });
-        }
 
         return formData;
     };
@@ -329,24 +286,6 @@ export default function AlterarPerfilPaciente() {
                     onChange={setEncaminhamento}
                 />
                 <InputArea label={'Descreva as principais queixas'} placeholder={''} defaultValue={queixas} onChangeText={setQueixas}/>
-
-                <Text style={EstiloGeral.h2}>Insira sua foto de perfil</Text>
-               
-                <View style={EstiloGeral.circleBackgroud}>
-                    <Image
-                        source={{ uri: 'https://drive.google.com/uc?export=view&id=' + profileImage }}
-                        style={EstiloGeral.iconUser}
-                        resizeMode="cover"
-                    />   
-                </View>
-
-                <Botao
-                    texto={'Selecionar Imagem'}
-                    onPress={selecionarImagem}
-                    corFundo="#1696de"
-                    corTexto="white"
-                    marginTop={10}
-                />
 
                 <Botao
                     texto={isLoading ? 'Salvando...' : 'Salvar'}
