@@ -1,7 +1,7 @@
 import { View, Text, TextInput, StyleSheet } from "react-native";
 import EstiloGeral from "../app/EstiloGeral";
 
-function Input({label, placeholder, onChangeText, secureTextEntry, multiline, numberOfLines, value}) { // Adicionada a prop value
+function Input({label, placeholder, onChangeText, secureTextEntry, multiline, numberOfLines, value, defaultValue}) { // Adicionada a prop value
     
     // Estilo base do input, vindo do EstiloGeral
     const inputStyle = [EstiloGeral.input];
@@ -27,6 +27,7 @@ function Input({label, placeholder, onChangeText, secureTextEntry, multiline, nu
                 numberOfLines={numberOfLines} // Sugestão de número de linhas para Android
                 // textAlignVertical é útil para multiline no Android
                 textAlignVertical={multiline ? 'top' : 'auto'} 
+                defaultValue={defaultValue} // Adicionado para valor padrão
             />
         </View>
     );
