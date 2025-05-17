@@ -10,7 +10,7 @@ import Input from '../components/Input';
 import api from '../services/api';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export default function Login() {
+export default function Menu() {
 
   const router = useRouter();
   const [tipoPerfil, setTipoPerfil] = useState(null); // Estado para armazenar o tipo de perfil
@@ -52,11 +52,14 @@ export default function Login() {
 
       <View style={EstiloGeral.containerInputsGeral}>
 
-        <Botao texto={'Tela Inicial'} onPress={() => {router.push('/')}} corTexto='white' corFundo='#1696de' marginTop={30}/>
-        <Botao texto={`${condicaoBtn}`} onPress={() => {router.push('/Listar')}} corTexto='white' corFundo='#1696de' marginTop={30}/>
-        <Botao texto={'Alterar Perfil'} onPress={() => {router.push('/AlterarPerfil')}} corTexto='white' corFundo='#1696de' marginTop={30}/>
-        <Botao texto={'Cadastrar'} onPress={() => {router.push('/Cadastro')}} corTexto='white' corFundo='#1696de' marginTop={30}/>
-        <Botao texto={'Login'} onPress={() => {router.push('/Login')}} corTexto='white' corFundo='#1696de' marginTop={30}/>
+        <Botao texto={'Tela Inicial'} onPress={() => {router.push('/')}} corTexto='white' corFundo='#1696de' marginTop={15}/>
+        <Botao texto={`${condicaoBtn}`} onPress={() => {router.push('/Listar')}} corTexto='white' corFundo='#1696de' marginTop={15}/>
+        <Botao texto={'Alterar Perfil'} onPress={() => {router.push('/AlterarPerfil')}} corTexto='white' corFundo='#1696de' marginTop={15}/>
+        <Botao texto={'Cadastrar'} onPress={() => {router.push('/Cadastro')}} corTexto='white' corFundo='#1696de' marginTop={15}/>
+        <Botao texto={'Login'} onPress={() => {router.push('/Login')}} corTexto='white' corFundo='#1696de' marginTop={15}/>
+
+        <Botao texto={'Limpar BD Local'} onPress={async () => {await AsyncStorage.clear(); Alert.alert("Atenção", "Banco de dados local excluído.")}} corTexto='white' corFundo='red' marginTop={15}/>
+
 
       </View>
 

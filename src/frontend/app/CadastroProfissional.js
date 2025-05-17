@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     alignItems: 'center',
-    // paddingBottom: 40,
+    paddingBottom: 40,
     flexGrow: 1, 
   }
 });

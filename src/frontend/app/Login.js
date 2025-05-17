@@ -59,7 +59,7 @@ export default function Login() {
 
       <StatusBar style="auto" />
       
-      <Header titulo={'Login'}/>
+      <Header titulo={'Login'} imageSourceProp={true}/>
       <SubHeader conteudo={'Preencha as informações para fazer login'}/>
 
       <View style={EstiloGeral.containerInputsGeral}>

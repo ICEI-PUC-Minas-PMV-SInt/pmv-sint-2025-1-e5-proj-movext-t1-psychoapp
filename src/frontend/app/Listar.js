@@ -199,6 +199,8 @@ export default function Listar() {
 
                               <Text style={EstiloGeral.conteudoDadoLista}>{item.paciente.queixas}</Text>
 
+                              <Text>{'\n'}</Text>
+
                             </View>
 
 
@@ -274,6 +276,8 @@ export default function Listar() {
 
                               <Text style={EstiloGeral.conteudoDadoLista}>{item.profissional.trajetoriaProfissional}</Text>
 
+                              <Text>{'\n'}</Text>
+
                             </View>
 
 
@@ -297,7 +301,7 @@ const styles = StyleSheet.create({
     },
     contentContainer: {
         alignItems: 'center',
-        paddingBottom: 40, // Adicionado padding para melhor visualização
+        // paddingBottom: 40, // Adicionado padding para melhor visualização
         flexGrow: 1,
     },
     loadingContainer: {
