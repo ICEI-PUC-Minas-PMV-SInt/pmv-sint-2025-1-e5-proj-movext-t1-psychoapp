@@ -162,7 +162,7 @@ export default function AlterarPerfilPaciente() {
 
             if (response.status === 200) {
                 Alert.alert('Sucesso', 'Perfil atualizado com sucesso', [
-                    { text: 'OK', onPress: () => router.push('/ListagemUsuarios') }
+                    { text: 'OK', onPress: () => router.push('/Listar') }
                 ]);
             }
         } catch (error) {
@@ -318,15 +318,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingBottom: 40,
         flexGrow: 1,
-    },
-    imageContainer: {
-        alignItems: 'center',
-        marginVertical: 10,
-    },
-    profileImage: {
-        width: 150,
-        height: 150,
-        borderRadius: 75,
-        marginBottom: 10,
-    },
+    }
+   
 });
