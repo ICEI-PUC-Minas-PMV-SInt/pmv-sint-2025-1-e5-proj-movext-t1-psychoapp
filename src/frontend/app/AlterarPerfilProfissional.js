@@ -37,7 +37,7 @@ export default function AlterarPerfilProfissional() {
             const token = await AsyncStorage.getItem('tokenjwt');
             const email = await AsyncStorage.getItem('email');
 
-            if (!token || !userId) {
+            if (!token || !email) {
                 Alert.alert('Erro', 'Você precisa estar logado para acessar esta funcionalidade');
                 router.push('/Login');
                 return;
