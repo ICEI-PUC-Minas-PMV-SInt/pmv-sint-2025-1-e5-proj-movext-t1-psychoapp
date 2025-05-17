@@ -135,7 +135,7 @@ export default function Cadastro() {
 
         {/* ÁREA DE TESTES: */}
 
-        <View style={EstiloGeral.areaTeste}>
+        {/* <View style={EstiloGeral.areaTeste}>
 
           <Text style={{color:'white', fontFamily:'PlaypenSans_700Bold', fontSize: 16}}>ÁREA DE TESTES DO BD LOCAL:</Text>
 
@@ -153,11 +153,21 @@ export default function Cadastro() {
             });
           }} corFundo='#1696de' corTexto='white' marginTop={20}/>
 
-          {/* ÁREA DE TESTES: */}
 
-        </View>
+          <Botao texto={'TIPO PERFIL'} onPress={() => {
+            AsyncStorage.getItem('tipoPerfil').then((value) => {
+              Alert.alert("Tipo de Perfil:", value);
+            });
+          }} corFundo='#1696de' corTexto='white' marginTop={20}/>
+
+        </View> */}
+
+       {/* ÁREA DE TESTES: */}
 
       </View>
+
+  <View style={{height: 50}}></View>
+
     </ScrollView>
   );
 }

@@ -5,6 +5,7 @@ import EstiloGeral from './EstiloGeral';
 import Botao from '../components/Botao';
 
 import {useFonts, PlaypenSans_400Regular, PlaypenSans_700Bold} from '@expo-google-fonts/playpen-sans'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 export default function App() {
@@ -42,8 +43,9 @@ if (!fontsLoaded) {
           <Botao texto="Login" onPress={() => router.push('/Login')}/>
           <Text style={EstiloGeral.h2}>Ainda não tem cadastro?</Text>
           <Botao texto="Cadastrar" onPress={() => router.push('/Cadastro')}/>
+          <Botao texto="Menu" onPress={() => router.push('/Menu')}/>
 
-          <Botao texto="PACIENTE" onPress={() => router.push('/CadastroPaciente')}/>
+          <Botao texto="Limpar BD local" onPress={async () => await AsyncStorage.clear()} marginTop={50} corFundo='#1696de' corTexto='white'/>
 
         </View>
 

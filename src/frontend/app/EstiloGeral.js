@@ -60,6 +60,16 @@ const EstiloGeral = StyleSheet.create({
         height: 35,
     },
 
+    linkHamburger:{
+        position: 'absolute',
+        right: 15,
+    },
+
+    hamburguer:{
+        width: 28,
+        height: 28,
+    },
+
     logo:{
         width: 280,
         height: 134

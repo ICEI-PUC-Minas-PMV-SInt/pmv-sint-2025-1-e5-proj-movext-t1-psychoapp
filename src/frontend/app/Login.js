@@ -31,12 +31,17 @@ export default function Login() {
         })
 
         const token = resApi.data.token;
+        const tipoPerfil = resApi.data.tipoPerfil;
+        const id = resApi.data.id;
+        
 
         await AsyncStorage.setItem('tokenjwt', token);
+        await AsyncStorage.setItem('tipoPerfil', tipoPerfil);
+        await AsyncStorage.setItem('id', id);
 
         Alert.alert("Sucesso!", "Login bem-sucedido! Redirecionando...");
 
-        router.push('/'); // Após login bem sucedido, aqui vai direcionar para a página a ser criada de listagem de usuários de acordo com o tipo de perfil.
+        router.push('/Menu');
 
 
       }catch (e) {
