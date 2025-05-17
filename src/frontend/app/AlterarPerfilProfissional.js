@@ -27,9 +27,7 @@ export default function AlterarPerfilProfissional() {
     const [senha, setSenha] = useState('');
     const [tipoAtendimento, setTipoAtendimento] = useState('');
     const [trajetoriaProfissional, setTrajetoriaProfissional] = useState('');
-    const [profileImage, setProfileImage] = useState(null);
     const [idUsuario, setIdUsuario] = useState(null);
-    const [imageUri, setImageUri] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
     const carregarDadosUsuario = async () => {
@@ -47,7 +45,7 @@ export default function AlterarPerfilProfissional() {
 
             api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
-            const response = await api.get(`/list-pacientes`);
+            const response = await api.get(`/list-profissionais`);
             console.log('Dados do usuário:', response.data);
 
             const usuarioAtual = response.data.find(user => user.email === email);
@@ -77,13 +75,7 @@ export default function AlterarPerfilProfissional() {
             if (usuarioAtual.profissional) {
                 setTipoAtendimento(usuarioAtual.profissional.tipoAtendimento || '');
                 setTrajetoriaProfissional(usuarioAtual.profissional.trajetoriaProfissional || '');
-                setProfileImg(usuarioAtual.profissional.profileimg || null);
-
-                if (usuarioAtual.profissional.profileimg) {
-                    setProfileImage(`https://drive.google.com/file/d/${usuarioAtual.profissional.profileimg}`);
-                }
             }
-
         } catch (error) {
             console.error('Erro ao carregar dados do usuário:', error);
             Alert.alert('Erro', 'Não foi possível carregar os dados do usuário');
@@ -93,31 +85,6 @@ export default function AlterarPerfilProfissional() {
     useEffect(() => {
         carregarDadosUsuario();
     }, []);
-
-    const selecionarImagem = async () => {
-        try {
-            const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-
-            if (status !== 'granted') {
-                Alert.alert('Permissão negada', 'Precisamos da permissão para acessar suas fotos');
-                return;
-            }
-
-            const result = await ImagePicker.launchImageLibraryAsync({
-                mediaTypes: ImagePicker.MediaTypeOptions.Images,
-                allowsEditing: true,
-                aspect: [1, 1],
-                quality: 0.8,
-            });
-
-            if (!result.canceled && result.assets && result.assets.length > 0) {
-                setImageUri(result.assets[0].uri);
-            }
-        } catch (error) {
-            console.error('Erro ao selecionar imagem:', error);
-            Alert.alert('Erro', 'Não foi possível selecionar a imagem');
-        }
-    };
 
     const prepararFormData = () => {
         const formData = new FormData();
@@ -141,21 +108,8 @@ export default function AlterarPerfilProfissional() {
 
         formData.append('tipoAtendimento', tipoAtendimento);
         formData.append('trajetoriaProfissional', trajetoriaProfissional);
-        formData.append('profileimg', profileimg);
         formData.append('email', email);
         formData.append('cpf', cpf);
-
-        if (imageUri) {
-            const filename = imageUri.split('/').pop();
-            const match = /\.(\w+)$/.exec(filename);
-            const type = match ? `image/${match[1]}` : 'image/jpeg';
-
-            formData.append('profileimg', {
-                uri: imageUri,
-                name: filename,
-                type,
-            });
-        }
 
         return formData;
     };
@@ -199,7 +153,7 @@ export default function AlterarPerfilProfissional() {
 
             if (response.status === 200) {
                 Alert.alert('Sucesso', 'Perfil atualizado com sucesso', [
-                    { text: 'OK', onPress: () => router.push('/ListagemUsuarios') }
+                    { text: 'OK', onPress: () => router.push('/Listar') }
                 ]);
             }
         } catch (error) {
@@ -284,11 +238,11 @@ export default function AlterarPerfilProfissional() {
 
             <View style={EstiloGeral.containerInputsGeral}>
 
-                <Input label={'Nome completo'} placeholder={'Digite seu nome completo'} onChangeText={setNome} />
-                <Input label={'Telefone / Celular'} placeholder={'Digite seu Telefone / Celular'} onChangeText={setTelefone} keyboardType="numeric" />
-                <Input label={'Data de Nascimento'} placeholder={'xx/xx/xxxx'} onChangeText={setNasc} />
-                <Input label={'Cidade'} placeholder={'Digite sua Cidade'} onChangeText={setCidade} />
-                <Input label={'Estado'} placeholder={'Digite seu Estado'} onChangeText={setEstado} />
+                <Input label={'Nome completo'} placeholder={'Digite seu nome completo'} onChangeText={setNome} defaultValue={nome} />
+                <Input label={'Telefone / Celular'} placeholder={'Digite seu Telefone / Celular'} defaultValue={telefone} onChangeText={setTelefone} keyboardType="numeric" />
+                <Input label={'Data de Nascimento'} placeholder={'xx/xx/xxxx'} onChangeText={setNasc} defaultValue={nasc} />
+                <Input label={'Cidade'} placeholder={'Digite sua Cidade'} onChangeText={setCidade} defaultValue={cidade} />
+                <Input label={'Estado'} placeholder={'Digite seu Estado'} onChangeText={setEstado} defaultValue={estado} />
 
                 <InputRadio
                     labelExterna={'Qual o seu tipo de atendimento ?'}
@@ -300,25 +254,7 @@ export default function AlterarPerfilProfissional() {
                     onChange={setTipoAtendimento}
 
                 />
-                <InputArea label={'Descreva a sua trajetória profissional'} placeholder={'Digite sua trajetória'} onChangeText={setTrajetoriaProfissional} />
-
-                <Text style={EstiloGeral.h2}>Insira sua foto de perfil</Text>
-                 <View style={EstiloGeral.circleBackgroud}>
-                    <Image
-                        source={{ uri: 'https://drive.google.com/uc?export=view&id=' + profileImage }}
-                        style={EstiloGeral.iconUser}
-                        resizeMode="cover"
-                    />   
-                </View>
-
-
-                <Botao
-                    texto={'Selecionar Imagem'}
-                    onPress={selecionarImagem}
-                    corFundo="#1696de"
-                    corTexto="white"
-                    marginTop={10}
-                />
+                <InputArea label={'Descreva a sua trajetória profissional'} placeholder={'Digite sua trajetória'} onChangeText={setTrajetoriaProfissional} defaultValue={trajetoriaProfissional} />
 
                 <Botao
                     texto={isLoading ? 'Salvando...' : 'Salvar'}
@@ -352,10 +288,5 @@ const styles = StyleSheet.create({
         // paddingBottom: 40,
         flexGrow: 1,
     },
-    profileImage: {
-        width: 150,
-        height: 150,
-        borderRadius: 75,
-        marginBottom: 10,
-    },
+   
 });
