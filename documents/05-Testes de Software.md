@@ -7,7 +7,7 @@ Entrar com: email e senha.
 - Login realizado com sucesso! Usuário paciente: direcionado para a página que lista profissionais cadastrados e usuário profissional: direcionado para a página que lista pacientes.
 - Não tem cadastro? Clicar em cadastrar.
 
-<a href="img/Login.jpeg"><img width="1000" src="img/Login.jpeg"></a>
+<a href="img/Login.jpeg"><img width="200" src="img/Login.jpeg"></a>
 
 
 ## Fazer Cadastro: 
@@ -28,6 +28,9 @@ Se tiver queixas descrevê-las.
 Inserir uma foto de perfil.
 - Cadastro finalizado com sucesso! Usuário é direcionado para a tela de login.
 - Erro: Nenhuma resposta do servidor ou erro ao configurar requisições.
+
+  <a href="img/CadatroFinalizado.jpeg"><img width="200" src="img/CadatroFinalizado.jpeg"></a>
+
 
 ### Cadastro Profissional: 
 
