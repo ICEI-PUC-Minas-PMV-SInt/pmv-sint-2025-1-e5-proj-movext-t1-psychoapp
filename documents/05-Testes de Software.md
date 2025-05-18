@@ -5,10 +5,8 @@
 Entrar com: email e senha.
 
 - Login realizado com sucesso! Usuário paciente: direcionado para a página que lista profissionais cadastrados e usuário profissional: direcionado para a página que lista pacientes.
-- Não tem cadastro? Clicar em cadastrar.
-
 <a href="img/Login.jpeg"><img width="200" src="img/Login.jpeg"></a>
-
+- Não tem cadastro? Clicar em cadastrar.
 
 ## Fazer Cadastro: 
 
