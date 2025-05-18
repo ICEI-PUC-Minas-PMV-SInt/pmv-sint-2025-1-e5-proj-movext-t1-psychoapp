@@ -15,6 +15,9 @@ Entrar com: email e senha.
 ### Cadastro Geral:
 
 Entrar com: nome completo, CPF, Email, Telefone, Data de nascimento, Cidade, Estado, Senha. Mensagem: Atenção preencha todos os campos.
+
+<a href="img/CadastroGeral.jpeg"><img width="200" src="img/CadastroGeral.jpeg"></a>
+
 - Cadastro realizado com sucesso! Usuário direcionado para segunda etapa do cadastro.
 - Erro: Nenhuma resposta do servidor ou erro ao configurar requisições.
 
