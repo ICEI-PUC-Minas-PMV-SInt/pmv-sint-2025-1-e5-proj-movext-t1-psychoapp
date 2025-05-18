@@ -18,9 +18,10 @@ Entrar com: nome completo, CPF, Email, Telefone, Data de nascimento, Cidade, Est
 
 <a href="img/CadastroGeral.jpeg"><img width="200" src="img/CadastroGeral.jpeg"></a>
 
+- Cadastro realizado com sucesso! Usuário direcionado para segunda etapa do cadastro.
+
 <a href="img/Cadastroinicial.jpeg"><img width="200" src="img/Cadastroinicial.jpeg"></a>
 
-- Cadastro realizado com sucesso! Usuário direcionado para segunda etapa do cadastro.
 - Erro: Nenhuma resposta do servidor ou erro ao configurar requisições.
 
 ### Cadastro Paciente: 
