@@ -7,7 +7,7 @@ Entrar com: email e senha.
 - Login realizado com sucesso! Usuário paciente: direcionado para a página que lista profissionais cadastrados e usuário profissional: direcionado para a página que lista pacientes.
 - Não tem cadastro? Clicar em cadastrar.
 
-<a href="img/Login.jpeg"><img width="1000" src="img/fluxo-telas-diagrama.jpg"></a>
+<a href="img/Login.jpeg"><img width="1000" src="img/Login.jpeg"></a>
 
 
 ## Fazer Cadastro: 
