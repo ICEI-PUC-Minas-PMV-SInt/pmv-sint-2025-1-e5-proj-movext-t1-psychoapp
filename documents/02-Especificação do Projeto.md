@@ -195,7 +195,7 @@ Hoje a aplicação conta com um backend (Node.js) e banco de dados (MongoDB) que
 
 ### Situação Futura do Projeto:
 
-<img src="img/BPMN.png" width = "700px">
+<img src="img/bpmnatualizado.png" width = "700px">
 
 ## Gerenciamento de Cronograma
 ### Cronograma de Tarefas
