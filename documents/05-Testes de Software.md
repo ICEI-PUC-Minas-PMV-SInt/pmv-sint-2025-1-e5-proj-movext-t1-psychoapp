@@ -27,10 +27,11 @@ Escolher tipo de encaminhamento: Escola, Médico ou Psicólogo.
 Se tiver queixas descrevê-las.
 Inserir uma foto de perfil.
 - Cadastro finalizado com sucesso! Usuário é direcionado para a tela de login.
-- Erro: Nenhuma resposta do servidor ou erro ao configurar requisições.
 
   <a href="img/CadatroFinalizado.jpeg"><img width="200" src="img/CadatroFinalizado.jpeg"></a>
 
+  
+- Erro: Nenhuma resposta do servidor ou erro ao configurar requisições.
 
 ### Cadastro Profissional: 
 
