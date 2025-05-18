@@ -6,6 +6,8 @@ Entrar com: email e senha.
 
 - Login realizado com sucesso! Usuário paciente: direcionado para a página que lista profissionais cadastrados e usuário profissional: direcionado para a página que lista pacientes.
   
+<a href="img/DadosLogin.jpeg"><img width="200" src="img/DadosLogin.jpeg"></a>
+
 <a href="img/Login.jpeg"><img width="200" src="img/Login.jpeg"></a>
 
 - Não tem cadastro? Clicar em cadastrar.
@@ -33,11 +35,11 @@ Escolher tipo de encaminhamento: Escola, Médico ou Psicólogo.
 Se tiver queixas descrevê-las.
 Inserir uma foto de perfil.
 
-  <a href="img/CadastroPaciente.jpeg"><img width="200" src="img/CadastroPaciente.jpeg"></a>
+<a href="img/CadastroPaciente.jpeg"><img width="200" src="img/CadastroPaciente.jpeg"></a>
 
 - Cadastro finalizado com sucesso! Usuário é direcionado para a tela de login.
 
-  <a href="img/CadatroFinalizado.jpeg"><img width="200" src="img/CadatroFinalizado.jpeg"></a>
+<a href="img/CadatroFinalizado.jpeg"><img width="200" src="img/CadatroFinalizado.jpeg"></a>
 
   
 - Erro: Nenhuma resposta do servidor ou erro ao configurar requisições.
