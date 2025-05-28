@@ -40,7 +40,7 @@ Vantagens:
 - Ideal para aplicações uqe precisam lidar com muitas conexões simultâneas, pois apresenta alta escalabilidade.
 -  O vetor V8 do Chrome otimiza a execução do JavaScript tornando o Node.js rápido.
 -  Conta com uma vasta comunidade de desenvolvedores e uma enorme quantidade de bibliotecas disponíveis via npm.
--  Permite o desenvolvimento full-stack, uma vez que é possível usar JavaScript tanto no fr0nt-end como no back-end.
+-  Permite o desenvolvimento full-stack, uma vez que é possível usar JavaScript tanto no front-end como no back-end.
 
 Desvantagens:
 
