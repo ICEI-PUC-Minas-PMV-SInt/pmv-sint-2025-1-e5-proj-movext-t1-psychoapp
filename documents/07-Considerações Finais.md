@@ -53,6 +53,17 @@ Desvantagens:
 A versão gratuita oferece muitos recursos essenciais tais como: modelo flexível de documentos, alta escalabilidade e indexação avançada. Toda via, ferramentas de gerenciamento mais sofisticadas, suporte oficial e opções anacadas de replicação e segurança, são exclusivas das versões pagas.
 
 # Análise crítica e propostas de melhorias:
+
+Para garantir a escalabilidade, segurança e manutenção eficiente do sistema, algumas melhorias técnicas podem ser implementadas ao longo do ciclo de desenvolvimento. 
+
+No frontend, recomenda-se a migração do Expo Go para o bare workflow em ambientes de produção. Essa mudança permitirá maior controle sobre as dependências do projeto, redução do tamanho final do aplicativo e acesso a configurações mais avançadas de build e performance. Além disso, é importante estabelecer uma rotina de atualização e documentação das bibliotecas utilizadas no React Native, evitando conflitos decorrentes de mudanças frequentes na base do framework. 
+
+No backend, é recomendável aplicar boas práticas de segurança como o uso de middlewares (helmet, cors, rate-limit) e a criação de testes automatizados para validação das rotas e funções críticas. Também se sugere uma estrutura clara com async/await e tratamento de erros consistente, facilitando a manutenção e leitura do código assíncrono do Node.js. 
+
+Quanto ao banco de dados, embora o MongoDB seja uma boa escolha para dados flexíveis, deve-se monitorar as limitações do Prisma Client com esse tipo de banco. Caso necessário, o uso do Mongoose pode ser avaliado para maior estabilidade e suporte. Ainda, é essencial configurar autenticação reforçada, backups automáticos e práticas seguras de acesso mesmo na versão gratuita do serviço. 
+
+Por fim, adotar ferramentas de monitoramento (como logs centralizados e métricas básicas) e preparar a infraestrutura para CI/CD com testes e deploy automatizados contribuirá para maior qualidade e confiabilidade do sistema como um todo. 
+
 # Responsabilidades/ Atribuições
 
 Alicia
