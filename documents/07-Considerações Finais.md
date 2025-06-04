@@ -1,12 +1,12 @@
 # Avaliação dos Frameworks e Tecnologias Utilizadas no Desenvolvimento do Projeto:
 
 ## React Native:
-Framework de desenvolvimento de aplicativos moveis criada pelo Facebook que permite a criação de aplicativos para IOS e Android utilizando JavaScript e React.
+Framework de desenvolvimento de aplicativos móveis criada pelo Facebook que permite a criação de aplicativos para IOS e Android utilizando JavaScript e React.
 
 Vantagens:
 
 - Permite reutilizar grande parte do código entre IOS e Android, reduzindo o tempo de desenvolvimento.
-- Usa componentes nativos, garantido uma experiencia fluida para os usuários.
+- Usa componentes nativos, garantido uma experiência fluida para os usuários.
 - Tem suporte de uma comunidade ativa e do próprio Facebook facilitando encontrar soluções e bibliotecas úteis.
 - Permite visualizar mudanças no código em tempo real, acelerando o desenvolvimento.
 
@@ -50,7 +50,7 @@ Desvantagens:
 
 ## Banco de dados MongoDB
 
-A versão gratuita oferece muitos recursos essenciais tais como: modelo flexível de documentos, alta escalabilidade e indexação avançada. Toda via, ferramentas de gerenciamento mais sofisticadas, suporte oficial e opções anacadas de replicação e segurança, são exclusivas das versões pagas.
+O Banco de dados MongoDB, por sua estrutura orientada a documentos, se adapta bem a dados flexíveis como perfis de usuários e históricos de atendimento. Todavia, o uso da versão gratuita limita recursos criticos como segurança avançada, replicação e ferramentas de administração. Além disso, a integração com o ORM Prisma ainda está em fase experimental, o que pode acarretar instabilidade ou restrições de uso.
 
 # Análise crítica e propostas de melhorias:
 
@@ -79,6 +79,7 @@ Elisabete
 - Modelo relacional da aplicação
 - Cronograma de custos
 - Telas: Cadastro Profissionais
+- Considerações finais
 
 Danilo
 
