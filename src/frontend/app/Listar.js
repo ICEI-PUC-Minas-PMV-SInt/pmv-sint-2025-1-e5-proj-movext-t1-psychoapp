@@ -270,7 +270,7 @@ export default function Listar() {
                                                             <Text>{'\n'}</Text>
 
                               <View style={EstiloGeral.containerIconeLista}>
-                                <Image source={require('../assets/imgs/icone-modalidade.png')} style={{width:30, height:30}}/>
+                                <Image source={require('../assets/imgs/icone-queixas.png')} style={{width:20, height:20}}/>
                                 <Text style={EstiloGeral.tituloDadoLista}>Trajetória profissional:</Text>
                               </View>
 

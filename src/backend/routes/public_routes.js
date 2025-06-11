@@ -160,10 +160,13 @@ router.post("/login", async (req, res) => {
       } else {
         const JWT_SECRET = process.env.JSON_SECRET;
         const token = jwt.sign({id: usuarioBD.id}, JWT_SECRET, {expiresIn: '60m'})
+        const id = usuarioBD.id;
+        const tipoPerfil = usuarioBD.tipoPerfil;
+        const name = usuarioBD.name;
 
         res
           .status(200)
-          .json({ message: "Login realizado com sucesso.", token: token });
+          .json({ message: "Login realizado com sucesso.", token: token, id: id, tipoPerfil: tipoPerfil, name: name });
       }
     }
   } catch (err) {
