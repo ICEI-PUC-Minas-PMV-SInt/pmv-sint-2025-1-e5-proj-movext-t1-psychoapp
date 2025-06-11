@@ -55,8 +55,6 @@ export default function Menu() {
         <Botao texto={'Tela Inicial'} onPress={() => {router.push('/')}} corTexto='white' corFundo='#1696de' marginTop={15}/>
         <Botao texto={`${condicaoBtn}`} onPress={() => {router.push('/Listar')}} corTexto='white' corFundo='#1696de' marginTop={15}/>
         <Botao texto={'Alterar Perfil'} onPress={() => {router.push('/AlterarPerfil')}} corTexto='white' corFundo='#1696de' marginTop={15}/>
-        <Botao texto={'Alterar Perfil Paciente'} onPress={() => {router.push('/AlterarPerfilPaciente')}} corTexto='white' corFundo='#1696de' marginTop={15}/>
-        <Botao texto={'Alterar Perfil Profissional'} onPress={() => {router.push('/AlterarPerfilProfissional')}} corTexto='white' corFundo='#1696de' marginTop={15}/>
         <Botao texto={'Cadastrar'} onPress={() => {router.push('/Cadastro')}} corTexto='white' corFundo='#1696de' marginTop={15}/>
         <Botao texto={'Login'} onPress={() => {router.push('/Login')}} corTexto='white' corFundo='#1696de' marginTop={15}/>
 
